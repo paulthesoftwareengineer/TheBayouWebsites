@@ -152,55 +152,149 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     outline: 2px solid var(--secondary-color);
 }
-/* Services Section */
-.section {
+
+/* Services Overview Section */
+.services-overview {
     padding: var(--section-padding);
     background-color: var(--white-color);
+    text-align: center;
 }
 
-.section-title {
+.services-overview h2 {
     font-size: 2rem;
-    text-align: center;
     margin-bottom: var(--spacing-medium);
     color: var(--primary-color);
 }
 
-.section-description {
-    text-align: center;
-    margin-bottom: var(--spacing-large);
-    color: var(--light-text-color);
+.services-overview p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-medium);
+    color: var(--text-color);
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-large);
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-medium);
 }
 
 .service-item {
+    flex: 1 1 calc(33.333% - var(--spacing-medium));
+    max-width: calc(33.333% - var(--spacing-medium));
     background-color: var(--light-bg-color);
-    padding: var(--spacing-large);
-    border-radius: 8px;
-    text-align: center;
+    padding: var(--spacing-medium);
+    border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
 }
 
-.service-item:hover, .service-item:focus {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.service-title {
-    font-size: 1.5rem;
+.service-item h3 {
+    font-size: 1.25rem;
     margin-bottom: var(--spacing-small);
     color: var(--primary-color);
 }
 
-.service-description {
-    color: var(--light-text-color);
+.service-item p {
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
+.why-choose-us {
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .why-choose-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+    .why-choose-us h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    }
+
+    .why-choose-us p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    }
+
+    .choose-us-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    }
+
+    .choose-us-list li {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .choose-us-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .choose-us-list strong {
+    color: #007BFF;
+    font-weight: bold;
+    }
+        /* Testimonials Section */
+        .testimonials {
+            padding: var(--section-padding);
+            background-color: var(--white-color);
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-medium);
+            color: var(--primary-color);
+        }
+
+        .testimonials-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-medium);
+        }
+
+        .testimonial-item {
+            flex: 1 1 calc(33.333% - var(--spacing-medium));
+            max-width: calc(33.333% - var(--spacing-medium));
+            background-color: var(--light-bg-color);
+            padding: var(--spacing-medium);
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .testimonial-item p {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: var(--spacing-small);
+        }
+
+        .testimonial-item cite {
+            font-size: 0.875rem;
+            color: var(--light-text-color);
+            display: block;
+            text-align: right;
+        }
 
 /* Footer */
 .footer {
@@ -247,7 +341,7 @@ body {
 
 .footer-copyright {
     font-size: 0.875rem;
-    color: var(--light-text-color);
+    color: white;
     margin-top: var(--spacing-medium);
 }
 

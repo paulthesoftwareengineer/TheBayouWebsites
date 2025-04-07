@@ -26,6 +26,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" as="style">
     <script src="./JavaScript/javascript.js" defer></script>
 </head>
+
 <body>
     <nav class="nav" role="navigation" aria-label="Main Navigation">
         <div class="nav-container">
@@ -49,19 +50,100 @@
     </header>
 
     <main>
-        <!-- Why Choose Us Section -->
+        <section class="hero-intro" role="region" aria-labelledby="hero-intro-heading">
+            <div class="container">
+                <h2 id="hero-intro-heading">Your Partner in Crafting Unique Web Experiences</h2>
+                <p>At Bayou Websites, we specialize in creating tailored web solutions for blue-collar businesses in Louisiana. Our team of experts is dedicated to helping you establish a strong online presence that reflects your brand and meets your business goals.</p>
+            </div>
+        </section>
+
         <section class="why-choose-us" role="region" aria-labelledby="why-choose-us-heading">
             <div class="container">
-            <h2 id="why-choose-us-heading">Why Choose Us</h2>
-            <p>At Bayou Websites, we specialize in creating tailored web solutions for blue-collar businesses in Louisiana. Here's why we're the best choice:</p>
-            <ul>
-            <li><img src="https://img.icons8.com/ios-filled/50/000000/paint-palette.png" alt="Custom designs icon" aria-hidden="true"> Custom designs that reflect your brand.</li>
-            <li><img src="https://img.icons8.com/ios-filled/50/000000/smartphone.png" alt="Mobile-friendly icon" aria-hidden="true"> Mobile-friendly and responsive websites.</li>
-            <li><img src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="SEO-optimized icon" aria-hidden="true"> SEO-optimized to help you rank higher.</li>
-            <li><img src="https://img.icons8.com/ios-filled/50/000000/customer-support.png" alt="Dedicated support icon" aria-hidden="true"> Dedicated support and maintenance.</li>
-            </ul>
-            <a href="services.html" class="cta-link" aria-label="Learn more about our services">Learn More About Our Services</a>
+                <h2 id="why-choose-us-heading">Why Choose Us</h2>
+                <p>At Bayou Websites, we specialize in creating tailored web solutions for blue-collar businesses in Louisiana. Here's why we're the best choice:</p>
+                <div class="why-choose-us-content">
+                    <ul class="why-choose-us-list">
+                        <li class="why-choose-us-item">
+                            <div class="icon-wrapper">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/paint-palette.png" alt="Custom designs icon">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3>Custom Designs</h3>
+                                <p>We create designs that reflect your unique brand identity.</p>
+                            </div>
+                        </li>
+                        <li class="why-choose-us-item">
+                            <div class="icon-wrapper">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/smartphone.png" alt="Mobile-friendly icon">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3>Mobile-Friendly</h3>
+                                <p>Our websites are responsive and optimized for all devices.</p>
+                            </div>
+                        </li>
+                        <li class="why-choose-us-item">
+                            <div class="icon-wrapper">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="SEO-optimized icon">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3>SEO-Optimized</h3>
+                                <p>We help your website rank higher and attract more visitors.</p>
+                            </div>
+                        </li>
+                        <li class="why-choose-us-item">
+                            <div class="icon-wrapper">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/customer-support.png" alt="Dedicated support icon">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3>Dedicated Support</h3>
+                                <p>We provide ongoing support and maintenance for your website.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cta-wrapper">
+                    <a href="services.html" class="cta-link" aria-label="Learn more about our services">Learn More About Our Services</a>
+                </div>
             </div>
+        </section>
+
+        <section class="featured-projects" role="region" aria-labelledby="featured-projects-heading">
+          <div class="container">
+            <h2 id="featured-projects-heading" class="section-title">Our Featured Projects</h2>
+            <p class="section-description">Take a look at some of our standout projects, showcasing our ability to deliver tailored web solutions that drive results.</p>
+            <ul class="portfolio-grid">
+              <li class="portfolio-item">
+            <a href="project-ironwood.html" class="portfolio-link">
+              <img src="./images/LongHaul.gif" alt="Ironwood Carriers website screenshot" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="portfolio-title">Ironwood Carriers</h3>
+                <p class="portfolio-description">Developed a robust website for a long-haul trucking company, enhancing their online presence and streamlining client communication. Integrated a custom tracking system for real-time shipment updates.</p>
+                <span class="portfolio-tech"><strong>Technologies:</strong> HTML5, CSS3, JavaScript, PHP</span>
+              </div>
+            </a>
+              </li>
+              <li class="portfolio-item">
+            <a href="project-wacarparts.html" class="portfolio-link">
+              <img src="./images/Wa carparts.gif" alt="WA Car Parts e-commerce platform screenshot" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="portfolio-title">WA Car Parts</h3>
+                <p class="portfolio-description">Designed and built an e-commerce platform for automotive parts, significantly boosting sales and expanding customer reach. Implemented a user-friendly interface and secure payment gateway.</p>
+                <span class="portfolio-tech"><strong>Technologies:</strong> React, Node.js, MongoDB, Stripe API</span>
+              </div>
+            </a>
+              </li>
+              <li class="portfolio-item">
+            <a href="project-spiritracing.html" class="portfolio-link">
+              <img src="./images/SpiritRacingTeam.gif" alt="Spirit Racing Team dynamic website screenshot" class="portfolio-image">
+              <div class="portfolio-overlay">
+                <h3 class="portfolio-title">Spirit Racing Team</h3>
+                <p class="portfolio-description">Created a dynamic website for a racing team, featuring an interactive event calendar and sponsorship highlights. Enhanced fan engagement and team visibility through social media integration.</p>
+                <span class="portfolio-tech"><strong>Technologies:</strong> Angular, Firebase, Cloud Functions</span>
+              </div>
+            </a>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <!-- Services Overview Section -->
@@ -70,59 +152,77 @@
             <h2 id="services-overview-heading">Our Services</h2>
             <p>We offer a range of services to help your business thrive online:</p>
             <div class="services-list">
-            <div class="service-item">
-            <img src="https://img.icons8.com/ios-filled/50/000000/code.png" alt="Web Design icon" aria-hidden="true">
-            <h3>Web Design</h3>
-            <p>Custom, responsive designs tailored to your brand.</p>
+            <div class="service-item" style="border: 5px solid black; padding: 10px;">
+                <img src="https://img.icons8.com/ios-filled/50/000000/code.png" alt="Web Design icon" aria-hidden="true">
+                <h3>Web Design</h3>
+                <p>Custom, responsive designs tailored to your brand.</p>
             </div>
-            <div class="service-item">
-            <img src="https://img.icons8.com/ios-filled/50/000000/combo-chart.png" alt="SEO Optimization icon" aria-hidden="true">
-            <h3>SEO Optimization</h3>
-            <p>Boost your visibility and attract more customers.</p>
+            <div class="service-item" style="border: 5px solid black; padding: 10px;">
+                <img src="https://img.icons8.com/ios-filled/50/000000/combo-chart.png" alt="SEO Optimization icon" aria-hidden="true">
+                <h3>SEO Optimization</h3>
+                <p>Boost your visibility and attract more customers.</p>
             </div>
-            <div class="service-item">
-            <img src="https://img.icons8.com/ios-filled/50/000000/maintenance.png" alt="Maintenance & Support icon" aria-hidden="true">
-            <h3>Maintenance & Support</h3>
-            <p>Reliable support to keep your website running smoothly.</p>
+            <div class="service-item" style="border: 5px solid black; padding: 10px;">
+                <img src="https://img.icons8.com/ios-filled/50/000000/maintenance.png" alt="Maintenance & Support icon" aria-hidden="true">
+                <h3>Maintenance & Support</h3>
+                <p>Reliable support to keep your website running smoothly.</p>
             </div>
-            <div>
-            <a href="services.html" class="cta-link" aria-label="Explore all our services">Explore All Services</a>
+            <div class="service-item" style="border: 5px solid black; padding: 10px;">
+                <img src="https://img.icons8.com/ios-filled/50/000000/online-store.png" alt="E-Commerce Solutions icon" aria-hidden="true">
+                <h3>E-Commerce Solutions</h3>
+                <p>Set up and optimize your online store for success.</p>
+            </div>
+            <div class="service-item" style="border: 5px solid black; padding: 10px;">
+            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/commercial-development-management.png" alt="commercial-development-management"/>
+            <h3>Social Media Management</h3>
+            <p>Engage your audience and grow your online presence.</p>
+            </div>
+            <div class="service-item" style="border: 5px solid black; padding: 10px;">
+            <img src="https://img.icons8.com/ios-filled/50/000000/cloud.png" alt="Hosting Services icon" aria-hidden="true">
+            <h3>Hosting Services</h3>
+            <p>Secure and reliable hosting for your website.</p>
+            </div>
+            </div>
             </div>
         </section>
+
 
         <!-- Our Process Section -->
         <section class="our-process" role="region" aria-labelledby="our-process-heading">
             <div class="container">
             <h2 id="our-process-heading" class="section-title">Our Process</h2>
-            <p class="section-description">We follow a streamlined process to deliver exceptional results:</p>
+            <p class="section-description">We follow a streamlined process to deliver exceptional results for your business:</p>
             <div class="process-steps">
-            <div class="process-step">
+            <div class="process-step" style="border: 5px solid black; padding: 10px; margin-bottom: 20px;">
             <div class="step-icon">
                 <img src="https://img.icons8.com/ios-filled/50/000000/speech-bubble.png" alt="Consultation Icon" aria-hidden="true">
             </div>
             <div class="step-content">
                 <h3 class="step-title">Consultation</h3>
-                <p class="step-description">We discuss your needs and goals to create a tailored plan.</p>
+                <p class="step-description">We collaborate with you to understand your goals and create a customized plan.</p>
             </div>
             </div>
-            <div class="process-step">
+            <div class="process-step" style="border: 5px solid black; padding: 10px; margin-bottom: 20px;">
             <div class="step-icon">
                 <img src="https://img.icons8.com/ios-filled/50/000000/design.png" alt="Design & Development Icon" aria-hidden="true">
             </div>
             <div class="step-content">
                 <h3 class="step-title">Design & Development</h3>
-                <p class="step-description">Our team crafts a unique, responsive website for your business.</p>
+                <p class="step-description">Our experts design and develop a responsive, user-friendly website tailored to your brand.</p>
             </div>
             </div>
-            <div class="process-step">
+            <div class="process-step" style="border: 5px solid black; padding: 10px; margin-bottom: 20px;">
             <div class="step-icon">
                 <img src="https://img.icons8.com/ios-filled/50/000000/rocket.png" alt="Launch & Support Icon" aria-hidden="true">
             </div>
             <div class="step-content">
                 <h3 class="step-title">Launch & Support</h3>
-                <p class="step-description">We ensure a smooth launch and provide ongoing support.</p>
+                <p class="step-description">We ensure a seamless launch and provide ongoing support to keep your website running smoothly.</p>
             </div>
             </div>
+            </div>
+            <div class="cta-wrapper">
+            <a href="contact.html" class="cta-link" aria-label="Contact us to start your project">Start Your Project Today</a>
             </div>
             </div>
         </section>
@@ -130,14 +230,21 @@
         <!-- Testimonials Section -->
         <section class="testimonials" role="region" aria-labelledby="testimonials-heading">
             <div class="container">
-                <h2 id="testimonials-heading">What Our Clients Say</h2>
-                <div class="testimonial">
-                    <p>"Bayou Websites transformed our online presence. Our business has never been busier!"</p>
-                    <cite>- John D., Local Contractor</cite>
-                </div>
-                <div class="testimonial">
-                    <p>"The team at Bayou Websites understood our needs and delivered beyond expectations."</p>
-                    <cite>- Sarah L., Small Business Owner</cite>
+                <h2 id="testimonials-heading" class="section-title">What Our Clients Say</h2>
+                <p class="section-description">Hear from our satisfied clients about their experience working with us.</p>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Bayou Websites transformed our online presence. Our business has never been busier!"</p>
+                        <cite class="testimonial-author">- John D., Local Contractor</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The team at Bayou Websites understood our needs and delivered beyond expectations."</p>
+                        <cite class="testimonial-author">- Sarah L., Small Business Owner</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Their expertise and dedication made our website a true reflection of our brand."</p>
+                        <cite class="testimonial-author">- Emily R., Restaurant Owner</cite>
+                    </div>
                 </div>
             </div>
         </section>
@@ -156,10 +263,6 @@
                 <a href="portfolio.html">Portfolio</a>
                 <a href="contact.html">Contact</a>
             </nav>
-            <div class="footer-contact-info">
-                <p>Email: <a href="mailto:info@bayouwebsites.com" aria-label="Email us at info@bayouwebsites.com">info@bayouwebsites.com</a></p>
-                <p>Phone: <a href="tel:+1234567890" aria-label="Call us at +1 (234) 567-890">+1 (234) 567-890</a></p>
-            </div>
             <div class="footer-copyright">
                 <p>&copy; 2025 Bayou Websites. All rights reserved.</p>
             </div>

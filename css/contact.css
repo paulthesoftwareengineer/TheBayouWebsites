@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-    --primary-color: #026b19
+    --primary-color: #026b19;
     --secondary-color: #80cbc4;
     --text-color: #333;
     --light-text-color: #666;
@@ -84,6 +84,8 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -152,6 +154,7 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     outline: 2px solid var(--secondary-color);
 }
+
 
 .section {
     padding: 4rem 2rem;
@@ -301,7 +304,7 @@ body {
 
 .footer-copyright {
     font-size: 0.875rem;
-    color: var(--light-text-color);
+    color: white;
     margin-top: var(--spacing-medium);
 }
 

@@ -265,6 +265,155 @@ body {
     color: #ccc;
 }
 
+/* Our Process Section */
+.our-process {
+    padding: var(--section-padding);
+    background-color: var(--light-bg-color);
+    text-align: center;
+}
+
+.our-process h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-medium);
+    color: var(--primary-color);
+}
+
+.our-process p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-medium);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-medium);
+    justify-content: center;
+    align-items: start;
+}
+
+.process-step {
+    background-color: var(--white-color);
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacing-small);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Ensures the icon is white */
+}
+
+.step-content {
+    margin-top: 40px; /* Adjusted for icon spacing */
+}
+
+.step-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-small);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.step-description {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: center;
+}
+/* Testimonials Section */
+.testimonials {
+    padding: var(--section-padding);
+    background-color: var(--white-color);
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-medium);
+    color: var(--primary-color);
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-medium) 0;
+}
+
+.testimonial {
+    flex: 0 0 80%;
+    max-width: 400px;
+    background-color: var(--light-bg-color);
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--spacing-small);
+    border: 3px solid var(--primary-color);
+}
+
+.testimonial p {
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-small);
+}
+
+.testimonial cite {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--light-text-color);
+}
+
+/* Add smooth scrolling for slider */
+.testimonial-slider {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .testimonial {
+        flex: 0 0 90%;
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .section-title {
@@ -438,7 +587,7 @@ body {
 
 .footer-copyright {
     font-size: 0.875rem;
-    color: var(--light-text-color);
+    color: white;
     margin-top: var(--spacing-medium);
 }
 
