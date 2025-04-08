@@ -28,148 +28,145 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-</head>
-
-
-<body>
-    <nav class="navbar fixed-top">
-        <a class="navbar-brand" href="#">Bayou Websites
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#uniqueNavbarNav" aria-controls="uniqueNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="uniqueNavbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
     <style>
  
-/* Navbar Styles */
-.navbar {
-    background-color: var(--primary-color);
-    padding: 0.15rem 1.0rem; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    color: white;
-}
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--white-color);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.navbar-toggler {
-    border: none;
-    background: transparent;
-    color: var(--white-color);
-    font-size: 1.25rem;
-    transition: transform 0.3s;
-}
-
-.navbar-toggler:hover {
-    transform: scale(1.1);
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.navbar-nav {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-    .nav-link {
-        color: var(--white-color);
-        text-decoration: none;
-        font-size: 1rem;
-        font-weight: 500;
-        padding: 0.5rem 1rem;
-        transition: color 0.3s, background-color 0.3s;
-    }
-
-    .nav-link:hover {
-        color: var(--secondary-color);
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 5px;
-    }
-
-    .collapse.navbar-collapse {
-        justify-content: flex-end;
-    }
-
-    @media (max-width: 768px) {
-        .navbar-nav {
-            flex-direction: column;
+        /* Navbar Styles */
+        .navbar {
             background-color: var(--primary-color);
-            position: absolute;
-            top: 100%;
-            left: 0;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
             width: 100%;
-            padding: 1rem 0;
-            display: none;
+            z-index: 1000;
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
 
-        .navbar-nav.show {
-            display: flex;
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white-color);
+            text-decoration: none;
         }
 
-        .nav-item {
-            text-align: center;
+        .navbar-toggler {
+            border: none;
+            background: transparent;
+            color: var(--white-color);
+            font-size: 1.25rem;
+            transition: transform 0.3s;
         }
-    }
 
-    /* Always show navbar items on larger screens */
-    @media (min-width: 768px) {
+        .navbar-toggler:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
         .navbar-nav {
-            display: flex !important; /* Ensure items are displayed in a row */
+            display: flex;
             flex-direction: row;
             gap: 1rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            color: var(--white-color);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
         }
 
         .collapse.navbar-collapse {
-            display: flex !important; /* Prevent collapsing on larger screens */
             justify-content: flex-end;
         }
-    }
 
-    /* Default Bootstrap behavior for smaller screens */
-    @media (max-width: 768px) {
-        .navbar-nav {
-            flex-direction: column; /* Stack items vertically */
-            background-color: var(--primary-color);
-            padding: 1rem 0;
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                flex-direction: column;
+                background-color: var(--primary-color);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem 0;
+                display: none;
+            }
+
+            .navbar-nav.show {
+                display: flex;
+            }
+
+            .nav-item {
+                text-align: center;
+            }
         }
-    }
-    </style>
 
-    
-    <header class="hero" role="banner">
-        <div class="hero-content fade-in">
-            <h1 class="hero-title">Welcome</h1>
-            <a href="contact.html" class="hero-cta">Get Started</a>
-        </div>
+        @media (min-width: 768px) {
+            .navbar-nav {
+                display: flex !important;
+                flex-direction: row;
+                gap: 1rem;
+            }
+
+            .collapse.navbar-collapse {
+                display: flex !important;
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary" href="index.html" style="font-size: 80%;">Bayou Websites</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link active text-dark" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
+    <script>
+        window.addEventListener('scroll', () => document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50));
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggler = document.querySelector('.navbar-toggler');
+            const nav = document.querySelector('.navbar-nav');
+
+            toggler.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            });
+        });
+    </script>
+    
 
     <section class="hero-section py-5 text-white bg-dark" aria-labelledby="hero-heading">
         <div class="container text-center">
@@ -255,27 +252,36 @@
     </div>
   </section>
   
-      
-
-    <footer class="footer" role="contentinfo">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h2>Bayou Websites</h2>
-                <p>Web Development for Blue Collar Businesses</p>
-            </div>
-            <nav class="footer-links" aria-label="Footer Navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <div class="footer-copyright">
-                <p>&copy; 2025 Bayou Websites. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content container">
   
-      <script src="./JavaScript/javascript.js" defer></script>
-  </body>
-  </html>
+      <!-- Brand -->
+      <div class="footer-brand">
+        <h2 class="footer-logo">Bayou Websites</h2>
+        <p class="footer-tagline">Web Development for Blue-Collar Businesses</p>
+      </div>
+  
+  
+  
+      <!-- Newsletter -->
+      <form class="footer-newsletter" aria-label="Subscribe to our newsletter">
+        <label for="newsletter-email" class="visually-hidden">Email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+  
+      <!-- Social Media -->
+      <div class="footer-socials" aria-label="Social Media">
+        <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook.png" alt="" /></a>
+        <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="" /></a>
+        <a href="#" aria-label="LinkedIn"><img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="" /></a>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="footer-copy">
+        <p>&copy; 2025 Bayou Websites. All rights reserved.</p>
+      </div>
+  
+    </div>
+  </footer>
+  

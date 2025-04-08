@@ -298,3 +298,51 @@
     }
   }
   
+  
+/* iPhone-specific adjustments */
+@media only screen and (max-width: 480px) {
+    .hero-title {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+  
+    .hero-description {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+  
+    .hero-image {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+  
+    .navbar-nav .nav-link {
+      font-size: 0.9rem;
+    }
+  
+    .footer h5 {
+      font-size: 1rem;
+    }
+  
+    .footer p,
+    .footer a {
+      font-size: 0.8rem;
+    }
+  
+    .footer .social-links a {
+      font-size: 1.2rem;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .calendly-inline-widget {
+      height: 500px;
+    }
+  }
