@@ -169,28 +169,6 @@ textarea {
     background-color: #0056b3;
 }
 
-/* FAQ Styles */
-.faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-medium);
-}
-
-.faq-item {
-    border-bottom: 1px solid #eee;
-    padding-bottom: var(--spacing-medium);
-}
-
-.faq-question {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
-}
-
-.faq-answer {
-    color: var(--light-text-color);
-}
 
 /* Footer */
 .footer {
@@ -254,7 +232,6 @@ textarea {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -285,6 +262,18 @@ textarea {
     .footer-contact-info {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    #faq-heading {
+        font-size: 2rem;
+    }
+
+    .accordion-header {
+        font-size: 1rem;
+    }
+
+    .accordion-body {
+        font-size: 0.9rem;
     }
 }
 
@@ -341,6 +330,4 @@ textarea {
       font-size: 0.9rem;
       padding: 0.5rem 1rem;
     }
-  
-
-  }
+}

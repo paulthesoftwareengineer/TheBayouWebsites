@@ -137,7 +137,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
             <div class="container">
-                <a class="navbar-brand fw-bold text-primary" href="index.html" style="font-size: 80%;">Bayou Websites</a>
+                <a class="navbar-brand fw-bold text-primary" href="index.html" style="font-size: 150%;">Bayou Websites</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -167,186 +167,67 @@
         });
     </script>
     
-<!-- Contact Form Section -->
-<section id="contact" class="section py-5 bg-light" aria-labelledby="contact-heading">
-  <div class="container">
-    <h2 id="contact-heading" class="section-title text-center mb-4">Let’s Chat Today</h2>
-    <form id="contact-form" action="https://formspree.io/f/xeqyrgva" method="POST" class="mx-auto" style="max-width: 600px;">
-      <div class="mb-3">
-        <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
-        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required autocomplete="name">
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required autocomplete="email">
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
-        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message here" required></textarea>
-      </div>
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-      </div>
-    </form>
-  </div>
-</section>
-
-<!-- FAQ Section -->
-<section id="faq" class="section py-5" aria-labelledby="faq-heading">
-  <div class="container">
-    <h2 id="faq-heading" class="section-title text-center mb-5">Frequently Asked Questions</h2>
-    <div class="accordion" id="faqAccordion">
-
-      <!-- Reusable FAQ item -->
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-            What services do you offer?
-          </button>
-        </h3>
-        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            We specialize in web design, development, and maintenance for blue-collar businesses across the U.S.
+    <main>
+      <header class="hero" role="banner">
+          <div class="hero-content fade-in">
+              <h1 class="hero-title">Contact Us</h1>
+              <a href="contact.html" class="hero-cta">Get Started</a>
           </div>
+      </header>
+  </main><!-- Contact Form Section -->
+  <section id="contact" class="section py-5 bg-light" aria-labelledby="contact-heading">
+    <div class="container">
+      <h2 id="contact-heading" class="section-title text-center mb-4">Let’s Chat Today</h2>
+      <form id="contact-form" action="https://formspree.io/f/xeqyrgva" method="POST" class="mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required autocomplete="name">
         </div>
-      </div>
-
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-            How can I get a quote?
-          </button>
-        </h3>
-        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Simply fill out the contact form above and we’ll respond within 24 hours.
-          </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required autocomplete="email">
         </div>
-      </div>
-
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-            Do you offer ongoing support?
-          </button>
-        </h3>
-        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Absolutely! We offer monthly maintenance packages for continued success.
-          </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+          <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message here" required></textarea>
         </div>
-      </div>
-
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-            Will my website be mobile-friendly?
-          </button>
-        </h3>
-        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Yes, all our websites are fully responsive and optimized for every screen size.
-          </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
         </div>
-      </div>
-
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-            Can you help with SEO?
-          </button>
-        </h3>
-        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Yes, we include basic SEO in all packages and offer advanced SEO services upon request.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
-            What industries do you serve?
-          </button>
-        </h3>
-        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            We proudly serve blue-collar industries including plumbing, construction, HVAC, electrical, and more.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
-            What payment methods do you accept?
-          </button>
-        </h3>
-        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            We accept Venmo, Stripe, and PayPal. Payment platform fees may apply.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item mb-3">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
-            What if I need changes after the website is live?
-          </button>
-        </h3>
-        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            We offer post-launch updates and maintenance to keep your site running smoothly.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
-            What security measures do you implement?
-          </button>
-        </h3>
-        <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            All our sites include SSL encryption, secure coding practices, and regular plugin/theme updates.
-          </div>
-        </div>
-      </div>
-
+      </form>
     </div>
-  </div>
-</section>
+  </section>
 
- 
-<footer class="footer" role="contentinfo">
-  <div class="footer-content container">
-
-    <!-- Brand -->
-    <div class="footer-brand">
-      <h2 class="footer-logo">Bayou Websites</h2>
-      <p class="footer-tagline">Web Development for Blue-Collar Businesses</p>
+  
+  <!-- Footer Section -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content container">
+  
+      <!-- Brand -->
+      <div class="footer-brand">
+        <h2 class="footer-logo">Bayou Websites</h2>
+        <p class="footer-tagline">Web Development for Blue-Collar Businesses</p>
+      </div>
+  
+      <!-- Newsletter -->
+      <form class="footer-newsletter" aria-label="Subscribe to our newsletter">
+        <label for="newsletter-email" class="visually-hidden">Email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+  
+      <!-- Social Media -->
+      <div class="footer-socials" aria-label="Social Media">
+        <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook.png" alt="Facebook" /></a>
+        <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram" /></a>
+        <a href="#" aria-label="LinkedIn"><img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn" /></a>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="footer-copy">
+        <p>&copy; 2025 Bayou Websites. All rights reserved.</p>
+      </div>
+  
     </div>
-
-    <!-- Newsletter -->
-    <form class="footer-newsletter" aria-label="Subscribe to our newsletter">
-      <label for="newsletter-email" class="visually-hidden">Email address</label>
-      <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
-
-    <!-- Social Media -->
-    <div class="footer-socials" aria-label="Social Media">
-      <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook.png" alt="" /></a>
-      <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="" /></a>
-      <a href="#" aria-label="LinkedIn"><img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="" /></a>
-    </div>
-
-    <!-- Copyright -->
-    <div class="footer-copy">
-      <p>&copy; 2025 Bayou Websites. All rights reserved.</p>
-    </div>
-
-  </div>
-</footer>
+  </footer>
+  
