@@ -25,26 +25,145 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" as="style">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 
+
 <body>
-    <header class="navbar" role="banner">
-        <div class="navbar-container">
-            <a href="index.html" class="navbar-logo" aria-label="Go to Home Page">Bayou Websites</a>
-            <button class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span class="navbar-toggle-icon"></span>
-            </button>
-            <nav class="navbar-menu" id="navbar-menu" aria-label="Main Navigation">
-                <ul class="navbar-list">
-                    <li class="navbar-item"><a href="index.html">Home</a></li>
-                    <li class="navbar-item"><a href="about.html">About</a></li>
-                    <li class="navbar-item active"><a href="services.html">Services</a></li>
-                    <li class="navbar-item"><a href="portfolio.html">Portfolio</a></li>
-                    <li class="navbar-item"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+    <nav class="navbar fixed-top">
+        <a class="navbar-brand" href="#">Bayou Websites
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#uniqueNavbarNav" aria-controls="uniqueNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="uniqueNavbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
+    <style>
+ 
+
+    /* Navbar Styles */
+    .navbar {
+        background-color: var(--primary-color);
+        padding: 0.75rem 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, box-shadow 0.3s;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        color: white;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--white-color);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+        color: var(--white-color);
+        font-size: 1.25rem;
+        transition: transform 0.3s;
+    }
+
+    .navbar-toggler:hover {
+        transform: scale(1.1);
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .navbar-nav {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-link {
+        color: var(--white-color);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s, background-color 0.3s;
+    }
+
+    .nav-link:hover {
+        color: var(--secondary-color);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+    }
+
+    .collapse.navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    @media (max-width: 768px) {
+        .navbar-nav {
+            flex-direction: column;
+            background-color: var(--primary-color);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 1rem 0;
+            display: none;
+        }
+
+        .navbar-nav.show {
+            display: flex;
+        }
+
+        .nav-item {
+            text-align: center;
+        }
+    }
+
+    /* Always show navbar items on larger screens */
+    @media (min-width: 768px) {
+        .navbar-nav {
+            display: flex !important; /* Ensure items are displayed in a row */
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        .collapse.navbar-collapse {
+            display: flex !important; /* Prevent collapsing on larger screens */
+            justify-content: flex-end;
+        }
+    }
+
+    /* Default Bootstrap behavior for smaller screens */
+    @media (max-width: 768px) {
+        .navbar-nav {
+            flex-direction: column; /* Stack items vertically */
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+        }
+    }
+    </style>
 
     <header class="hero" role="banner">
         <div class="hero-content fade-in">
@@ -53,83 +172,89 @@
         </div>
     </header>
 
-        <!-- Services Overview Section -->
-        <section class="services-overview" role="region" aria-labelledby="services-overview-heading">
-            <div class="container">
-            <h2 id="services-overview-heading">Our Services</h2>
-            <p>We offer a range of services to help your business thrive online:</p>
-            <div class="services-list">
-            <div class="service-item" style="border: 5px solid black; padding: 10px;">
-                <img src="https://img.icons8.com/ios-filled/50/000000/code.png" alt="Web Design icon" aria-hidden="true">
-                <h3>Design</h3>
-                <p>Custom, responsive designs tailored to your brand.</p>
+    <section class="web-services" id="web-services" aria-labelledby="web-services-heading">
+        <div class="container">
+          <h2 id="web-services-heading" class="section-title">Our Web Services</h2>
+          <p class="section-subtitle">Everything your business needs to succeed online.</p>
+          
+          <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+              <img src="https://img.icons8.com/ios-filled/50/026b19/code.png" alt="" aria-hidden="true" />
+              <h3>Custom Web Design</h3>
+              <p>Responsive, mobile-friendly websites that match your brand and attract customers.</p>
             </div>
-            <div class="service-item" style="border: 5px solid black; padding: 10px;">
-                <img src="https://img.icons8.com/ios-filled/50/000000/combo-chart.png" alt="SEO Optimization icon" aria-hidden="true">
-                <h3>SEO</h3>
-                <p>Boost your visibility and attract more customers.</p>
+      
+            <!-- Service 2 -->
+            <div class="service-card">
+              <img src="https://img.icons8.com/ios-filled/50/026b19/combo-chart.png" alt="" aria-hidden="true" />
+              <h3>SEO Optimization</h3>
+              <p>We help you rank higher on Google and drive more organic traffic to your website.</p>
             </div>
-            <div class="service-item" style="border: 5px solid black; padding: 10px;">
-                <img src="https://img.icons8.com/ios-filled/50/000000/maintenance.png" alt="Maintenance & Support icon" aria-hidden="true">
-                <h3>Maintenance</h3>
-                <p>Reliable support to keep your website running smoothly.</p>
+      
+            <!-- Service 3 -->
+            <div class="service-card">
+              <img src="https://img.icons8.com/ios-filled/50/026b19/maintenance.png" alt="" aria-hidden="true" />
+              <h3>Ongoing Maintenance</h3>
+              <p>Reliable support, updates, and monitoring to keep your site running smoothly.</p>
             </div>
-            <div class="service-item" style="border: 5px solid black; padding: 10px;">
-            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/commercial-development-management.png" alt="commercial-development-management"/>
-            <h3>Socials</h3>
-            <p>Engage your audience and grow your online presence.</p>
-            </div>
-            </div>
-            </div>
-        </section>
-
-        <!-- The Importance of These Services -->
-        <section class="importance-of-services" role="region" aria-labelledby="importance-of-services-heading">
-            <div class="container">
-            <h2 id="importance-of-services-heading">Why These Services Matter</h2>
-            <p>In today's digital age, having a strong online presence is essential for any business. Here's why our services are crucial:</p>
-            <ul class="importance-list">
-                <li>
-                <strong>Design:</strong> A professional, responsive website creates a lasting first impression and builds trust with your audience.
-                </li>
-                <li>
-                <strong>SEO:</strong> Optimizing your website ensures that potential customers can find you easily on search engines.
-                </li>
-                <li>
-                <strong>Maintenance:</strong> Regular updates and support keep your website secure and running smoothly.
-                </li>
-                <li>
-                <strong>Socials:</strong> Engaging with your audience on social media helps build relationships and grow your brand.
-                </li>
-            </ul>
-            </div>
-        </section>
-        
-
-        <!-- Why Choose Us Section -->
-        <section class="why-choose-us" role="region" aria-labelledby="why-choose-us-heading">
-            <div class="container">
-            <h2 id="why-choose-us-heading">Why Choose Us?</h2>
-            <p>We are committed to delivering exceptional results for your business. Here's what sets us apart:</p>
-            <ul class="choose-us-list">
-                <li>
-                <strong>Expertise:</strong> Our team has years of experience in web design and digital marketing.
-                </li>
-                <li>
-                <strong>Customization:</strong> We tailor every solution to meet your unique business needs.
-                </li>
-                <li>
-                <strong>Support:</strong> We provide ongoing support to ensure your success.
-                </li>
-                <li>
-                <strong>Results-Driven:</strong> Our focus is on delivering measurable results for your business.
-                </li>
-            </ul>
-            </div>
-        </section>
-
-    
-
+          </div>
+        </div>
+      </section>
+      
+  
+  <!-- Importance of These Services Section -->
+  <section class="importance-of-services py-5" role="region" aria-labelledby="importance-of-services-heading">
+    <div class="container">
+      <h2 id="importance-of-services-heading" class="section-title text-center mb-4">Why These Services Matter</h2>
+      <p class="lead text-center mb-4">In today’s digital world, a strong online presence is more important than ever. Here’s how our services help:</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <strong>Design:</strong> A professional, responsive website builds trust and creates a great first impression.
+        </li>
+        <li class="list-group-item">
+          <strong>SEO:</strong> Helps customers find you on search engines and drives organic traffic.
+        </li>
+        <li class="list-group-item">
+          <strong>Maintenance:</strong> Keeps your website secure, up-to-date, and functioning properly.
+        </li>
+        <li class="list-group-item">
+          <strong>Socials:</strong> Connect with your audience and grow your reach through engaging content.
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us py-5 bg-light" role="region" aria-labelledby="why-choose-us-heading">
+    <div class="container">
+      <h2 id="why-choose-us-heading" class="section-title text-center mb-4">Why Choose Us?</h2>
+      <p class="text-center lead mb-4">We’re passionate about helping hardworking businesses succeed online. Here’s what makes us different:</p>
+      <ul class="row list-unstyled justify-content-center g-3">
+        <li class="col-md-6">
+          <div class="p-3 bg-white rounded shadow-sm h-100">
+            <strong>Expertise:</strong> Our team has years of hands-on experience in web design and digital marketing.
+          </div>
+        </li>
+        <li class="col-md-6">
+          <div class="p-3 bg-white rounded shadow-sm h-100">
+            <strong>Customization:</strong> Every solution we provide is tailored to your specific goals and needs.
+          </div>
+        </li>
+        <li class="col-md-6">
+          <div class="p-3 bg-white rounded shadow-sm h-100">
+            <strong>Support:</strong> We’re here before, during, and after launch to help you grow.
+          </div>
+        </li>
+        <li class="col-md-6">
+          <div class="p-3 bg-white rounded shadow-sm h-100">
+            <strong>Results-Driven:</strong> We measure success by the results your website delivers.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  
     <style>
         @media (max-width: 768px) {
             .services-grid {
