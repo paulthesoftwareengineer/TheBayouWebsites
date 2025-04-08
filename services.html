@@ -20,24 +20,26 @@
     <link rel="canonical" href="https://www.bayouwebsites.com/"/>
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/services.css"/>
+    <link rel="stylesheet" href="./Scripts/javascript.js"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" as="style">
-    <script src="./JavaScript/javascript.js" defer></script>
 </head>
 <body>
     <nav class="nav" role="navigation" aria-label="Main Navigation">
         <div class="nav-container">
             <a href="index.html" class="nav-logo" aria-label="Go to Home Page">Bayou Websites</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="nav-toggle-icon"></span>
+            </button>
             <ul class="nav-menu">
-                <li class="nav-item active"><a href="index.html" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="index.html" aria-current="page">Home</a></li>
                 <li class="nav-item"><a href="about.html">About</a></li>
                 <li class="nav-item"><a href="services.html">Services</a></li>
                 <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"></button>
         </div>
     </nav>
 
@@ -56,27 +58,50 @@
             <div class="services-list">
             <div class="service-item" style="border: 5px solid black; padding: 10px;">
                 <img src="https://img.icons8.com/ios-filled/50/000000/code.png" alt="Web Design icon" aria-hidden="true">
-                <h3>Web Design</h3>
+                <h3>Design</h3>
                 <p>Custom, responsive designs tailored to your brand.</p>
             </div>
             <div class="service-item" style="border: 5px solid black; padding: 10px;">
                 <img src="https://img.icons8.com/ios-filled/50/000000/combo-chart.png" alt="SEO Optimization icon" aria-hidden="true">
-                <h3>SEO Optimization</h3>
+                <h3>SEO</h3>
                 <p>Boost your visibility and attract more customers.</p>
             </div>
             <div class="service-item" style="border: 5px solid black; padding: 10px;">
                 <img src="https://img.icons8.com/ios-filled/50/000000/maintenance.png" alt="Maintenance & Support icon" aria-hidden="true">
-                <h3>Maintenance & Support</h3>
+                <h3>Maintenance</h3>
                 <p>Reliable support to keep your website running smoothly.</p>
             </div>
             <div class="service-item" style="border: 5px solid black; padding: 10px;">
             <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/commercial-development-management.png" alt="commercial-development-management"/>
-            <h3>Social Media Management</h3>
+            <h3>Socials</h3>
             <p>Engage your audience and grow your online presence.</p>
             </div>
             </div>
             </div>
         </section>
+
+        <!-- The Importance of These Services -->
+        <section class="importance-of-services" role="region" aria-labelledby="importance-of-services-heading">
+            <div class="container">
+            <h2 id="importance-of-services-heading">Why These Services Matter</h2>
+            <p>In today's digital age, having a strong online presence is essential for any business. Here's why our services are crucial:</p>
+            <ul class="importance-list">
+                <li>
+                <strong>Design:</strong> A professional, responsive website creates a lasting first impression and builds trust with your audience.
+                </li>
+                <li>
+                <strong>SEO:</strong> Optimizing your website ensures that potential customers can find you easily on search engines.
+                </li>
+                <li>
+                <strong>Maintenance:</strong> Regular updates and support keep your website secure and running smoothly.
+                </li>
+                <li>
+                <strong>Socials:</strong> Engaging with your audience on social media helps build relationships and grow your brand.
+                </li>
+            </ul>
+            </div>
+        </section>
+        
 
         <!-- Why Choose Us Section -->
         <section class="why-choose-us" role="region" aria-labelledby="why-choose-us-heading">
@@ -100,26 +125,7 @@
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials" role="region" aria-labelledby="testimonials-heading">
-            <div class="container">
-                <h2 id="testimonials-heading">What Our Clients Say</h2>
-                <div class="testimonials-list">
-                    <div class="testimonial-item">
-                        <p>"Bayou Websites transformed our online presence. Our website is now modern, responsive, and user-friendly!"</p>
-                        <cite>- John D., Local Business Owner</cite>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Thanks to their SEO services, our traffic has doubled in just three months. Highly recommend!"</p>
-                        <cite>- Sarah L., Marketing Manager</cite>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Their team is incredibly supportive and always available to help. We couldn't be happier!"</p>
-                        <cite>- Mike R., Small Business Owner</cite>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
 
     <style>
         @media (max-width: 768px) {

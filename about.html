@@ -20,6 +20,7 @@
     <link rel="canonical" href="https://www.bayouwebsites.com/"/>
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/about.css"/>
+    <link rel="stylesheet" href="./Scripts/javascript.js"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
@@ -27,75 +28,97 @@
     <script src="./JavaScript/javascript.js" defer></script>
 </head>
 <body>
-    <nav class="nav" role="navigation" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo" aria-label="Go to Home Page">Bayou Websites</a>
-            <ul class="nav-menu">
-                <li class="nav-item active"><a href="index.html" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="about.html">About</a></li>
-                <li class="nav-item"><a href="services.html">Services</a></li>
-                <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
-                <li class="nav-item"><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"></button>
-        </div>
-    </nav>
+  <nav class="nav" role="navigation" aria-label="Main Navigation">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo" aria-label="Go to Home Page">Bayou Websites</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="nav-toggle-icon"></span>
+        </button>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" aria-current="page">Home</a></li>
+            <li class="nav-item active"><a href="about.html">About</a></li>
+            <li class="nav-item"><a href="services.html">Services</a></li>
+            <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
     <header class="hero" role="banner">
-        <div class="hero-content fade-in">
-            <h1 class="hero-title">About Us</h1>
-            <a href="contact.html" class="hero-cta">Get Started</a>
-        </div>
+      <div class="hero-content fade-in">
+        <h1 class="hero-title">About Us</h1>
+        <a href="contact.html" class="hero-cta">Get Started</a>
+      </div>
     </header>
-    
     <main>
-        <section id="about" class="about-section" aria-labelledby="about-heading">
+      <section id="about" class="about-section" aria-labelledby="about-heading">
           <div class="container">
-            <h2 id="about-heading" class="section-title"></h2>
-            <p class="about-text">At Bayou Websites, we specialize in creating tailored web solutions for blue-collar businesses in Louisiana. Our team understands the unique challenges and opportunities in this sector, and we are committed to delivering high-quality, user-friendly websites that drive results.</p>
+              <h2 id="about-heading" class="section-title">About Us</h2>
+              <p class="about-text">
+                  At Bayou Websites, we specialize in creating tailored web solutions for blue-collar businesses.
+                  Our team understands the unique challenges and opportunities in this sector, and we are committed to delivering
+                  high-quality, user-friendly websites that drive results.
+              </p>
+              <ul class="about-values">
+                  <li><span aria-hidden="true">✔</span> Tailored web solutions for your business</li>
+                  <li><span aria-hidden="true">✔</span> Expertise in blue-collar industries</li>
+                  <li><span aria-hidden="true">✔</span> Focus on user-friendly, results-driven designs</li>
+              </ul>
           </div>
-        </section>
-      
-        <section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-heading">
+      </section>
+  
+      <section id="mission" class="mission-section" aria-labelledby="mission-heading">
           <div class="container">
-            <h2 id="testimonials-heading" class="section-title">What Our Clients Say</h2>
-            <div class="testimonials-grid">
-          <div class="testimonial">
-              <div class="testimonial-content">
-            <p class="testimonial-quote">"Bayou Websites transformed our online presence. Their team was professional, responsive, and delivered exactly what we needed!"</p>
-            <p class="testimonial-author">- John Doeles, Sparks Electrical Company</p>
-              </div>
+              <h2 id="mission-heading" class="section-title">Our Mission</h2>
+              <p class="mission-text">
+                  Our mission is to empower blue-collar businesses with the digital tools they need to succeed.
+                  We believe that every business, regardless of size or industry, deserves a strong online presence.
+              </p>
+              <blockquote class="mission-quote">
+                  "Empowering businesses to thrive in the digital age."
+              </blockquote>
           </div>
-          <div class="testimonial">
-              <div class="testimonial-content">
-            <p class="testimonial-quote">"We were struggling with our old website, but Bayou Websites created a modern and functional site that has significantly boosted our customer engagement."</p>
-            <p class="testimonial-author">- Jane Smith, Mighty Oak Construction</p>
-              </div>
-          </div>
-          <div class="testimonial">
-              <div class="testimonial-content">
-            <p class="testimonial-quote">"The team at Bayou Websites really understood our needs and delivered a website that perfectly represents our brand. Highly recommended!"</p>
-            <p class="testimonial-author">- Michael Brown, Brown Plumbing, Inc.</p>
-              </div>
-          </div>
-          <div class="testimonial">
-              <div class="testimonial-content">
-            <p class="testimonial-quote">"Working with Bayou Websites was a game-changer for our business. Their expertise and attention to detail exceeded our expectations."</p>
-            <p class="testimonial-author">- Sarah Johnson, Green Landscaping.</p>
-              </div>
-          </div>
-            </div>
-          </div>
-        </section>
-            </main>
-        <section class="cta" aria-labelledby="cta-heading">
+      </section>
+  
+      <section id="team" class="team-section" aria-labelledby="team-heading">
           <div class="container">
-            <h2 id="cta-heading">Ready to Get Started?</h2>
-            <p>Contact us today to discuss your project and see how we can help your business thrive online.</p>
-            <a href="contact.html" class="cta-button">Contact Us</a>
+              <h2 id="team-heading" class="section-title">Meet Our Team</h2>
+              <div class="team-grid">
+                  <figure class="team-member fade-in">
+                      <img src="./images/Paul.jpg" alt="Paul Turner, smiling, wearing a blue shirt." class="team-member-photo" loading="lazy">
+                      <figcaption>
+                          <h3 class="team-member-name">Paul Turner</h3>
+                          <p class="team-member-role">Founder, Web Developer</p>
+                          <p class="team-member-bio">
+                              Paul brings over a decade of experience in web development and a passion for helping businesses
+                              succeed online. He specializes in creating custom solutions tailored to client needs.
+                          </p>
+                      </figcaption>
+                  </figure>
+                  <figure class="team-member fade-in">
+                      <figcaption>
+                          <h3 class="team-member-name">Melissa Brock</h3>
+                          <p class="team-member-role">Co-Founder</p>
+                          <p class="team-member-bio">
+                              Melissa is a talented designer with a keen eye for detail. She ensures every project is visually
+                              stunning and user-friendly, creating designs that resonate with clients and their audiences.
+                          </p>
+                      </figcaption>
+                  </figure>
+                  <figure class="team-member fade-in">
+                      <figcaption>
+                          <h3 class="team-member-name">Toby Brock</h3>
+                          <p class="team-member-role">Co-Founder</p>
+                          <p class="team-member-bio">
+                              Toby leverages his expertise in digital marketing to help clients reach their target audience.
+                              His strategies ensure businesses achieve measurable growth and success.
+                          </p>
+                      </figcaption>
+                  </figure>
+              </div>
           </div>
-        </section>
-      </main>
+      </section>
+  </main>
 
     <footer class="footer" role="contentinfo">
         <div class="footer-content">
