@@ -26,22 +26,25 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" as="style">
 </head>
+
 <body>
-    <nav class="nav" role="navigation" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo" aria-label="Go to Home Page">Bayou Websites</a>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span class="nav-toggle-icon"></span>
+    <header class="navbar" role="banner">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo" aria-label="Go to Home Page">Bayou Websites</a>
+            <button class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="navbar-toggle-icon"></span>
             </button>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="about.html">About</a></li>
-                <li class="nav-item"><a href="services.html">Services</a></li>
-                <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
-                <li class="nav-item"><a href="contact.html">Contact</a></li>
-            </ul>
+            <nav class="navbar-menu" id="navbar-menu" aria-label="Main Navigation">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><a href="index.html">Home</a></li>
+                    <li class="navbar-item"><a href="about.html">About</a></li>
+                    <li class="navbar-item active"><a href="services.html">Services</a></li>
+                    <li class="navbar-item"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="navbar-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <header class="hero" role="banner">
         <div class="hero-content fade-in">
