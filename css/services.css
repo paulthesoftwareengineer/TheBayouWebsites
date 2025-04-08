@@ -368,28 +368,6 @@ body {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: var(--primary-color);
-        padding: var(--spacing-small);
-        border-top: 2px solid var(--secondary-color);
-    }
-
-    .nav-menu.open {
-        display: flex;
-    }
-
-    .nav-item {
-        text-align: center;
-        padding: var(--spacing-small) 0;
-    }
 
     .hero {
         padding: 3rem 1rem;
