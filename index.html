@@ -31,35 +31,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
 
-  <section class="navbar-section" aria-labelledby="navbar-heading"></section>
-    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#">Bayou Websites</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active fw-semibold" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-semibold" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-semibold" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-semibold" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-semibold" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Bayou Websites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </section>
+    </div>
+  </nav>
+  
 
   <!-- Hero Section -->
   <section class="hero-section py-5 text-center bg-primary text-white" aria-labelledby="hero-heading">
@@ -178,4 +177,25 @@
   
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('#navbarNav');
+      const navLinks = document.querySelectorAll('.nav-link');
+  
+      // Toggle navbar on button click
+      navbarToggler.addEventListener('click', () => {
+        navbarCollapse.classList.toggle('show');
+      });
+  
+      // Close navbar when a nav-link is clicked
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+          }
+        });
+      });
+    });
+  </script>
   
