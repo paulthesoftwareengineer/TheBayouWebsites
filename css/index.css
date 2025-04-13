@@ -227,7 +227,7 @@ body {
 
 /* Process Section */
 .process-section {
-    background-color: var(--light-bg-color);
+    background-color: var(--secondary-color);
     padding: var(--spacing-lg);
     text-align: center;
 }
@@ -272,7 +272,7 @@ body {
 }
 
 .testimonials-section blockquote {
-    background-color: var(--light-bg-color);
+    background-color: var(--secondary-color);
     border-left: 4px solid var(--primary-color);
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
