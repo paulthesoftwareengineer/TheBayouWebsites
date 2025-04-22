@@ -66,8 +66,7 @@
     </div>
   </section>
 
-</body>
-</html>
+
 
       <section class="highlights-section py-5 bg-light" aria-labelledby="highlights-heading">
         <div class="container">
@@ -99,6 +98,59 @@
           <a href="contact.html" class="btn btn-light btn-lg mt-3">Get in Touch</a>
         </div>
       </section>
+
+      <!-- Large Square Pop-Up Modal -->
+<div class="modal fade" id="bayouModal" tabindex="-1" role="dialog" aria-labelledby="bayouModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="bayouModalLabel">Request a Consultation</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <p>We'd love to assist you with your website needs. Please fill out the form below to request a consultation.</p>
+              <!-- Formspree Form for the Modal -->
+              <form id="bayouRequestForm" action="https://formspree.io/f/your-form-id" method="POST">
+                  <div class="form-group">
+                      <label for="bayouName">Name</label>
+                      <input type="text" class="form-control" id="bayouName" name="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="bayouEmail">Email</label>
+                      <input type="email" class="form-control" id="bayouEmail" name="_replyto" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="bayouPhone">Phone Number</label>
+                      <input type="tel" class="form-control" id="bayouPhone" name="phone" placeholder="Your Phone Number" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="bayouMessage">Preferred Date & Time</label>
+                      <textarea class="form-control" id="bayouMessage" name="message" rows="3" placeholder="Let us know when you'd like to schedule" required></textarea>
+                  </div>
+                  <!-- Anti-spam field (hidden) -->
+                  <input type="text" name="_gotcha" style="display: none;">
+                  <button type="submit" class="btn btn-primary">Submit Request</button>
+              </form>
+              <!-- End Formspree Form -->
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- JavaScript to Automatically Trigger the Modal on Page Load -->
+<script>
+  $(document).ready(function(){
+      setTimeout(function(){
+          $('#tourPopup').modal('show');
+      }, 5000); // Delays the modal by 5 seconds
+  });
+</script>
 
       <!-- Our Process Section -->
 <section class="process-section py-5 bg-light" aria-labelledby="process-heading">
@@ -145,115 +197,117 @@
     </div>
   </section>
   
+
   <!-- Footer Section -->
-<footer class="footer" role="contentinfo">
-  <div class="footer-content container">
-      <!-- Brand -->
-      <div class="footer-brand">
-          <p class="footer-logo">Bayou Websites</p>
-          <p class="footer-tagline">Web Development for Blue-Collar Businesses</p>
-      </div>
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content container">
+        <!-- Brand -->
+        <div class="footer-brand">
+            <p class="footer-logo">Bayou Websites</p>
+            <p class="footer-tagline">Web Development for Blue-Collar Businesses</p>
+        </div>
+  
+        <!-- Navigation -->
+        <div class="footer-nav">
+            <h3 class="footer-nav-title">Quick Links</h3>
+            <ul class="list-unstyled">
+                <li><a href="index.html" aria-label="Home page">Home</a></li>
+                <li><a href="about.html" aria-label="About us">About</a></li>
+                <li><a href="services.html" aria-label="Our services">Services</a></li>
+                <li><a href="portfolio.html" aria-label="Our portfolio">Portfolio</a></li>
+                <li><a href="contact.html" aria-label="Contact us">Contact</a></li>
+            </ul>
+        </div>
+  
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+            <h3 class="footer-nav-title">Stay Updated</h3>
+            <form action="https://formspree.io/f/xeqyrgva" method="POST" aria-label="Subscribe to our newsletter">
+                <label for="newsletter-email" class="visually-hidden">Email address</label>
+                <div class="input-group">
+                    <input type="email" id="newsletter-email" name="email" class="form-control" placeholder="Your email address" required aria-describedby="newsletter-error">
+                    <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
+                </div>
+                <p id="newsletter-error" class="text-danger mt-2 visually-hidden">Please enter a valid email address.</p>
+            </form>
+        </div>
+   
+  
+        <!-- Copyright -->
+        <div class="footer-copy">
+            <p>© 2025 Bayou Websites. All rights reserved. <a href="privacy.html" aria-label="Privacy policy">Privacy Policy</a></p>
+        </div>
+    </div>
+  </footer>
+  
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
 
-      <!-- Navigation -->
-      <div class="footer-nav">
-          <h3 class="footer-nav-title">Quick Links</h3>
-          <ul class="list-unstyled">
-              <li><a href="index.html" aria-label="Home page">Home</a></li>
-              <li><a href="about.html" aria-label="About us">About</a></li>
-              <li><a href="services.html" aria-label="Our services">Services</a></li>
-              <li><a href="portfolio.html" aria-label="Our portfolio">Portfolio</a></li>
-              <li><a href="contact.html" aria-label="Contact us">Contact</a></li>
-          </ul>
-      </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
 
-      <!-- Newsletter -->
-      <div class="footer-newsletter">
-          <h3 class="footer-nav-title">Stay Updated</h3>
-          <form action="https://formspree.io/f/xeqyrgva" method="POST" aria-label="Subscribe to our newsletter">
-              <label for="newsletter-email" class="visually-hidden">Email address</label>
-              <div class="input-group">
-                  <input type="email" id="newsletter-email" name="email" class="form-control" placeholder="Your email address" required aria-describedby="newsletter-error">
-                  <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
-              </div>
-              <p id="newsletter-error" class="text-danger mt-2 visually-hidden">Please enter a valid email address.</p>
-          </form>
-      </div>
-     
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Navbar elements
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#navbarNav');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navbar = document.querySelector('.navbar');
 
-      <!-- Copyright -->
-      <div class="footer-copy">
-          <p>© 2025 Bayou Websites. All rights reserved. <a href="privacy.html" aria-label="Privacy policy">Privacy Policy</a></p>
-      </div>
-  </div>
-</footer>
+        // Check if elements exist
+        if (!navbarToggler || !navbarCollapse || !navLinks || !navbar) {
+            console.warn('Navbar elements not found.');
+            return;
+        }
 
+        // Set active link based on current page
+        const setActiveLink = () => {
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                link.classList.toggle('active', linkPath === currentPath);
+            });
+        };
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
+        // Initialize active link
+        setActiveLink();
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
+        // Toggle navbar on mobile
+        navbarToggler.addEventListener('click', () => {
+            const isExpanded = navbarCollapse.classList.contains('show');
+            navbarCollapse.classList.toggle('show');
+            navbarToggler.setAttribute('aria-expanded', !isExpanded);
+        });
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-      // Navbar elements
-      const navbarToggler = document.querySelector('.navbar-toggler');
-      const navbarCollapse = document.querySelector('#navbarNav');
-      const navLinks = document.querySelectorAll('.nav-link');
-      const navbar = document.querySelector('.navbar');
+        // Close mobile menu when a nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                    navbarToggler.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
 
-      // Check if elements exist
-      if (!navbarToggler || !navbarCollapse || !navLinks || !navbar) {
-          console.warn('Navbar elements not found.');
-          return;
-      }
+        // Handle window resize to reset menu state
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 992 && navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+                navbarToggler.setAttribute('aria-expanded', 'false');
+            }
+        });
 
-      // Set active link based on current page
-      const setActiveLink = () => {
-          const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-          navLinks.forEach(link => {
-              const linkPath = link.getAttribute('href');
-              link.classList.toggle('active', linkPath === currentPath);
-          });
-      };
-
-      // Initialize active link
-      setActiveLink();
-
-      // Toggle navbar on mobile
-      navbarToggler.addEventListener('click', () => {
-          const isExpanded = navbarCollapse.classList.contains('show');
-          navbarCollapse.classList.toggle('show');
-          navbarToggler.setAttribute('aria-expanded', !isExpanded);
-      });
-
-      // Close mobile menu when a nav link is clicked
-      navLinks.forEach(link => {
-          link.addEventListener('click', () => {
-              if (navbarCollapse.classList.contains('show')) {
-                  navbarCollapse.classList.remove('show');
-                  navbarToggler.setAttribute('aria-expanded', 'false');
-              }
-          });
-      });
-
-      // Handle window resize to reset menu state
-      window.addEventListener('resize', () => {
-          if (window.innerWidth >= 992 && navbarCollapse.classList.contains('show')) {
-              navbarCollapse.classList.remove('show');
-              navbarToggler.setAttribute('aria-expanded', 'false');
-          }
-      });
-
-      // Accessibility: Close menu on Escape key
-      document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
-              navbarCollapse.classList.remove('show');
-              navbarToggler.setAttribute('aria-expanded', 'false');
-              navbarToggler.focus();
-          }
-      });
-  });
-</script>
+        // Accessibility: Close menu on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+                navbarToggler.setAttribute('aria-expanded', 'false');
+                navbarToggler.focus();
+            }
+        });
+    });
+  </script>
