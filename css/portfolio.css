@@ -1,5 +1,5 @@
-  /* Variables */
-  :root {
+/* Variables */
+:root {
     --primary-color: #026b19;
     --secondary-color: #ffffff;
     --text-color: #333;
@@ -49,6 +49,10 @@ body {
     color: var(--white-color);
     text-decoration: none;
     transition: color var(--transition);
+    max-width: 100%; /* Ensure logo doesn't overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .navbar-brand:hover,
@@ -103,7 +107,7 @@ body {
     transition: max-height 0.3s ease-in-out;
 }
 
-/* Hero Section (simplified for brevity) */
+/* Hero Section */
 .hero-section {
     position: relative;
     display: flex;
@@ -170,6 +174,10 @@ body {
         border-bottom: none;
         background-color: rgba(255, 255, 255, 0.1);
     }
+
+    .hero-section {
+        background-attachment: scroll; /* Prevent fixed background on smaller screens */
+    }
 }
 
 @media (max-width: 576px) {
@@ -179,6 +187,19 @@ body {
 
     .nav-link {
         font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    }
+
+    .hero-section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+        min-height: 60vh; /* Adjust height for smaller screens */
+    }
+
+    .hero-section h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .hero-section .lead {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
     }
 }
 
