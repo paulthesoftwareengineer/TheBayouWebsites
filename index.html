@@ -149,12 +149,12 @@
       setTimeout(() => {
           const modalElement = document.getElementById('bayouModal');
           if (modalElement) {
-              const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
+              const modal = new bootstrap.Modal(modalElement);
               modal.show();
           } else {
               console.warn('Modal element not found.');
           }
-      }, 5000); // Delays the modal by 5 seconds
+      }, 5000); // Delay the modal by 5 seconds
   });
 </script>
 
