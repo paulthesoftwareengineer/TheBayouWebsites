@@ -66,101 +66,40 @@
     </div>
   </section>
 
-
-
-      <section class="highlights-section py-5 bg-light" aria-labelledby="highlights-heading">
-        <div class="container">
-          <h2 id="web-services-heading" class="text-center mb-5">Why Choose Us?</h2>
-          <div class="row text-center">
-            <div class="col-md-4 mb-4">
-              <i class="fas fa-mobile-alt fa-3x mb-3 text-primary"></i>
-              <h3 class="h5 fw-semibold">Mobile-First Design</h3>
-              <p class="text-muted">Our websites are optimized for mobile devices, ensuring your customers can reach you anywhere.</p>
-            </div>
-            <div class="col-md-4 mb-4">
-              <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
-              <h3 class="h5 fw-semibold">Results-Driven</h3>
-              <p class="text-muted">We focus on creating websites that convert visitors into loyal customers.</p>
-            </div>
-            <div class="col-md-4 mb-4">
-              <i class="fas fa-tools fa-3x mb-3 text-primary"></i>
-              <h3 class="h5 fw-semibold">Tailored Solutions</h3>
-              <p class="text-muted">Every website we build is customized to meet the unique needs of your business.</p>
-            </div>
-          </div>
+  <section class="highlights-section py-5 bg-light" aria-labelledby="highlights-heading">
+    <div class="container">
+      <h2 id="web-services-heading" class="text-center mb-5">Why Choose Us?</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <i class="fas fa-mobile-alt fa-3x mb-3 text-primary"></i>
+          <h3 class="h5 fw-semibold">Mobile-First Design</h3>
+          <p class="text-muted">Our websites are optimized for mobile devices, ensuring your customers can reach you anywhere.</p>
         </div>
-      </section>
-     
-      <section class="cta-section py-5 bg-primary text-white text-center" aria-labelledby="cta-heading">
-        <div class="container">
-          <h2 id="cta-heading" class="display-5 fw-bold">Ready to Elevate Your Online Presence?</h2>
-          <p class="lead">Let’s work together to create a website that showcases your business and drives growth.</p>
-          <a href="contact.html" class="btn btn-light btn-lg mt-3">Get in Touch</a>
+        <div class="col-md-4 mb-4">
+          <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
+          <h3 class="h5 fw-semibold">Results-Driven</h3>
+          <p class="text-muted">We focus on creating websites that convert visitors into loyal customers.</p>
         </div>
-      </section>
-
-      <!-- Large Square Pop-Up Modal -->
-<div class="modal fade" id="bayouModal" tabindex="-1" role="dialog" aria-labelledby="bayouModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="bayouModalLabel">Request a Consultation</h5>
-              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              <p>We'd love to assist you with your website needs. Please fill out the form below to request a consultation.</p>
-              <!-- Formspree Form for the Modal -->
-              <form id="bayouRequestForm" action="https://formspree.io/f/your-form-id" method="POST">
-                  <div class="form-group">
-                      <label for="bayouName">Name</label>
-                      <input type="text" class="form-control" id="bayouName" name="name" placeholder="Your Name" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="bayouEmail">Email</label>
-                      <input type="email" class="form-control" id="bayouEmail" name="_replyto" placeholder="Your Email" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="bayouPhone">Phone Number</label>
-                      <input type="tel" class="form-control" id="bayouPhone" name="phone" placeholder="Your Phone Number" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="bayouMessage">Preferred Date & Time</label>
-                      <textarea class="form-control" id="bayouMessage" name="message" rows="3" placeholder="Let us know when you'd like to schedule" required></textarea>
-                  </div>
-                  <!-- Anti-spam field (hidden) -->
-                  <input type="text" name="_gotcha" style="display: none;">
-                  <button type="submit" class="btn btn-primary">Submit Request</button>
-              </form>
-              <!-- End Formspree Form -->
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+        <div class="col-md-4 mb-4">
+          <i class="fas fa-tools fa-3x mb-3 text-primary"></i>
+          <h3 class="h5 fw-semibold">Tailored Solutions</h3>
+          <p class="text-muted">Every website we build is customized to meet the unique needs of your business.</p>
+        </div>
       </div>
-  </div>
-</div>
+    </div>
+  </section>
+     
+  <section class="cta-section py-5 bg-primary text-white text-center" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading" class="display-5 fw-bold">Ready to Elevate Your Online Presence?</h2>
+      <p class="lead">Let’s work together to create a website that showcases your business and drives growth.</p>
+      <a href="contact.html" class="btn btn-light btn-lg mt-3">Get in Touch</a>
+    </div>
+  </section>
 
-
-<!-- JavaScript to Automatically Trigger the Modal on Page Load -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-          const modalElement = document.getElementById('bayouModal');
-          if (modalElement) {
-              const modal = new bootstrap.Modal(modalElement);
-              modal.show();
-          } else {
-              console.warn('Modal element not found.');
-          }
-      }, 5000); // Delay the modal by 5 seconds
-  });
-</script>
-
-      <!-- Our Process Section -->
-<section class="process-section py-5 bg-light" aria-labelledby="process-heading">
-    <div class="container" >
+  <!-- Our Process Section -->
+  <section class="process-section py-5 bg-light" aria-labelledby="process-heading">
+    <div class="container">
       <h2 id="process-heading" class="text-center mb-5">Our Simple 3-Step Process</h2>
       <div class="row text-center">
         <div class="col-md-4 mb-4">
@@ -203,7 +142,6 @@
     </div>
   </section>
   
-
   <!-- Footer Section -->
   <footer class="footer" role="contentinfo">
     <div class="footer-content container">
@@ -238,7 +176,6 @@
             </form>
         </div>
    
-  
         <!-- Copyright -->
         <div class="footer-copy">
             <p>© 2025 Bayou Websites. All rights reserved. <a href="privacy.html" aria-label="Privacy policy">Privacy Policy</a></p>
@@ -246,76 +183,8 @@
     </div>
   </footer>
   
-  
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
-
-  
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Navbar elements
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarCollapse = document.querySelector('#navbarNav');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const navbar = document.querySelector('.navbar');
-
-        // Check if elements exist
-        if (!navbarToggler || !navbarCollapse || !navLinks || !navbar) {
-            console.warn('Navbar elements not found.');
-            return;
-        }
-
-        // Set active link based on current page
-        const setActiveLink = () => {
-            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-            navLinks.forEach(link => {
-                const linkPath = link.getAttribute('href');
-                link.classList.toggle('active', linkPath === currentPath);
-            });
-        };
-
-        // Initialize active link
-        setActiveLink();
-
-        // Toggle navbar on mobile
-        navbarToggler.addEventListener('click', () => {
-            const isExpanded = navbarCollapse.classList.contains('show');
-            navbarCollapse.classList.toggle('show');
-            navbarToggler.setAttribute('aria-expanded', !isExpanded);
-        });
-
-        // Close mobile menu when a nav link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (navbarCollapse.classList.contains('show')) {
-                    navbarCollapse.classList.remove('show');
-                    navbarToggler.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-
-        // Handle window resize to reset menu state
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 992 && navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
-                navbarToggler.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        // Accessibility: Close menu on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
-                navbarToggler.setAttribute('aria-expanded', 'false');
-                navbarToggler.focus();
-            }
-        });
-    });
-  </script>
 </body>
 </html>
