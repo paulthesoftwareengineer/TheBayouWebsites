@@ -23,7 +23,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
@@ -105,7 +105,7 @@
       <div class="modal-content">
           <div class="modal-header">
               <h5 class="modal-title" id="bayouModalLabel">Request a Consultation</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
               </button>
           </div>
@@ -145,9 +145,15 @@
 
 <!-- JavaScript to Automatically Trigger the Modal on Page Load -->
 <script>
-  $(document).ready(function(){
-      setTimeout(function(){
-          $('#tourPopup').modal('show');
+  document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+          const modalElement = document.getElementById('bayouModal');
+          if (modalElement) {
+              const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
+              modal.show();
+          } else {
+              console.warn('Modal element not found.');
+          }
       }, 5000); // Delays the modal by 5 seconds
   });
 </script>
@@ -311,3 +317,5 @@
         });
     });
   </script>
+</body>
+</html>
