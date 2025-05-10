@@ -222,7 +222,7 @@ body {
   max-width: 800px;
   margin: 0 auto var(--spacing-lg);
   font-size: 1.125rem;
-  color: var(--light-text-color);
+  color: white
   line-height: 1.8;
 }
   
