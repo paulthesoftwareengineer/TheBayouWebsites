@@ -235,16 +235,23 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const modalElement = document.getElementById('welcomeModal');
-      if (modalElement) {
+      if (!sessionStorage.getItem('welcomeModalShown') && modalElement) {
         const modal = new bootstrap.Modal(modalElement, {
-          keyboard: true, // Allow closing with the keyboard
-          backdrop: 'static' // Prevent closing by clicking outside the modal
+          keyboard: true,
+          backdrop: 'static'
         });
         setTimeout(() => {
-          modal.show(); // Show the modal
-        }, 2000); // Delay by 2 seconds
-      } else {
-        console.error('Modal element with ID "welcomeModal" not found.');
+          modal.show();
+        }, 2000);
+
+        // Set sessionStorage when modal is closed (by any means)
+        modalElement.addEventListener('hidden.bs.modal', function () {
+          sessionStorage.setItem('welcomeModalShown', 'true');
+        });
+        // Also set when shown (in case user doesn't close, but navigates away)
+        modalElement.addEventListener('shown.bs.modal', function () {
+          sessionStorage.setItem('welcomeModalShown', 'true');
+        });
       }
     });
   </script>
