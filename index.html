@@ -238,7 +238,7 @@
       if (!sessionStorage.getItem('welcomeModalShown') && modalElement) {
         const modal = new bootstrap.Modal(modalElement, {
           keyboard: true,
-          backdrop: 'static'
+          backdrop: true // Use default backdrop, not 'static'
         });
         setTimeout(() => {
           modal.show();
@@ -247,6 +247,10 @@
         // Set sessionStorage when modal is closed (by any means)
         modalElement.addEventListener('hidden.bs.modal', function () {
           sessionStorage.setItem('welcomeModalShown', 'true');
+          // Remove any lingering modal-backdrop
+          document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+          document.body.classList.remove('modal-open');
+          document.body.style.overflow = '';
         });
         // Also set when shown (in case user doesn't close, but navigates away)
         modalElement.addEventListener('shown.bs.modal', function () {
