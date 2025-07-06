@@ -21,32 +21,254 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" as="style">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <style>
-        .modal-content {
-            animation: fadeIn 0.3s ease-in-out;
+        /* Hero Section Improvements */
+        .hero-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .hero-cta .btn {
+            transition: all 0.3s ease;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+        }
+        
+        .hero-cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Package Cards Improvements */
+        .package-card {
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+            background: #fff;
+            border: none !important;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.15);
+        }
+        
+        .featured-package {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%) !important;
+            color: #fff !important;
+            position: relative;
+        }
+        
+        .featured-package::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fbbf24;
+            color: #1f2937;
+            padding: 0.25rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            z-index: 10;
+        }
+        
+        .featured-package .card-title,
+        .featured-package .card-text,
+        .featured-package ul,
+        .featured-package li {
+            color: #fff !important;
+        }
+        
+        /* Section Improvements */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+            border-radius: 2px;
+        }
+        
+        /* Modal Improvements */
+        .modal-content {
+            border-radius: 1rem;
+            border: none;
+            animation: fadeInUp 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translate(-50%, -40%) scale(0.95);
+            }
+            to { 
+                opacity: 1; 
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        
+        /* Icon Improvements */
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        /* Testimonial Improvements */
+        .testimonial-card {
+            background: #fff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #3b82f6;
+            height: 100%;
+        }
+        
+        /* CTA Section Improvements */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            position: relative;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        /* Footer Improvements */
+        .footer {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-brand .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-nav-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .footer-nav ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-nav ul li a {
+            color: #e5e7eb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-nav ul li a:hover {
+            color: #3b82f6;
+        }
+        
+        .footer-copy {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* Responsive Improvements */
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 80vh;
+                padding: 2rem 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .package-card {
+                margin-bottom: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
         }
     </style>
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6MH8EEN7M9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-6MH8EEN7M9');
 </script>
+
 <body>
-  <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">Bayou Websites</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Bayou Websites</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -73,196 +295,286 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section py-5 text-center text-white" aria-labelledby="hero-heading">
+  <section class="hero-section text-center text-white" aria-labelledby="hero-heading">
     <div class="container">
-      <h1 id="hero-heading" class="display-4 fw-bold">Bayou Websites</h1>
-      <p class="lead mb-4">quality web services for blue collar businesses</p>
-      <div class="hero-cta">
-        <a href="contact.html" class="btn btn-light btn-lg me-3" role="button" aria-label="Contact us to get started">Get Started</a>
-        <a href="portfolio.html" class="btn btn-outline-light btn-lg" role="button" aria-label="View our portfolio">See Our Work</a>
+      <div class="hero-content">
+        <h1 id="hero-heading" class="display-3 fw-bold mb-4">Bayou Websites</h1>
+        <p class="lead mb-5 fs-4">Quality web services for blue-collar businesses</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-light btn-lg me-3" role="button" aria-label="Contact us to get started">Get Started</a>
+          <a href="portfolio.html" class="btn btn-outline-light btn-lg" role="button" aria-label="View our portfolio">See Our Work</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="highlights-section py-5 bg-light" aria-labelledby="highlights-heading">
+  <!-- Why Choose Us Section -->
+  <section class="py-5 bg-light" aria-labelledby="features-heading">
     <div class="container">
-      <h2 id="web-services-heading" class="text-center mb-5">Why Choose Us?</h2>
+      <h2 id="features-heading" class="section-title text-center">Why Choose Us?</h2>
       <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <i class="fas fa-mobile-alt fa-3x mb-3 text-primary"></i>
-          <h3 class="h5 fw-semibold">Mobile-First Design</h3>
+        <div class="col-lg-4 mb-4">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3 class="h4 fw-semibold mb-3">Mobile-First Design</h3>
           <p class="text-muted">Our websites are optimized for mobile devices, ensuring your customers can reach you anywhere.</p>
         </div>
-        <div class="col-md-4 mb-4">
-          <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
-          <h3 class="h5 fw-semibold">Results-Driven</h3>
+        <div class="col-lg-4 mb-4">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="h4 fw-semibold mb-3">Results-Driven</h3>
           <p class="text-muted">We focus on creating websites that convert visitors into loyal customers.</p>
         </div>
-        <div class="col-md-4 mb-4">
-          <i class="fas fa-tools fa-3x mb-3 text-primary"></i>
-          <h3 class="h5 fw-semibold">Tailored Solutions</h3>
+        <div class="col-lg-4 mb-4">
+          <div class="feature-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="h4 fw-semibold mb-3">Tailored Solutions</h3>
           <p class="text-muted">Every website we build is customized to meet the unique needs of your business.</p>
         </div>
       </div>
     </div>
   </section>
-     
-  <section class="cta-section py-5 bg-primary text-white text-center" aria-labelledby="cta-heading">
-    <div class="container">
-      <h2 id="cta-heading" class="display-5 fw-bold">Ready to Elevate Your Online Presence?</h2>
-      <p class="lead">Let’s work together to create a website that showcases your business and drives growth.</p>
-      <a href="contact.html" class="btn btn-light btn-lg mt-3">Get in Touch</a>
-    </div>
-  </section>
 
   <!-- Our Process Section -->
-  <section class="process-section py-5 bg-light" aria-labelledby="process-heading">
+  <section class="py-5" aria-labelledby="process-heading">
     <div class="container">
-      <h2 id="process-heading" class="text-center mb-5">Our Simple 3-Step Process</h2>
+      <h2 id="process-heading" class="section-title text-center">Our Simple 3-Step Process</h2>
       <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <i class="fas fa-comments fa-2x text-primary mb-3"></i>
-          <h5 class="fw-semibold">1. Discover</h5>
+        <div class="col-lg-4 mb-4">
+          <div class="feature-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3 class="h4 fw-semibold mb-3">1. Discover</h3>
           <p class="text-muted">We start by learning about your business, goals, and customers to create a clear project plan.</p>
         </div>
-        <div class="col-md-4 mb-4">
-          <i class="fas fa-laptop-code fa-2x text-primary mb-3"></i>
-          <h5 class="fw-semibold">2. Design & Build</h5>
-          <p class="text-muted">Our team designs a site that’s fast, responsive, and built for conversions—completely tailored to you.</p>
+        <div class="col-lg-4 mb-4">
+          <div class="feature-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="h4 fw-semibold mb-3">2. Design & Build</h3>
+          <p class="text-muted">Our team designs a site that's fast, responsive, and built for conversions—completely tailored to you.</p>
         </div>
-        <div class="col-md-4 mb-4">
-          <i class="fas fa-rocket fa-2x text-primary mb-3"></i>
-          <h5 class="fw-semibold">3. Launch & Support</h5>
+        <div class="col-lg-4 mb-4">
+          <div class="feature-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3 class="h4 fw-semibold mb-3">3. Launch & Support</h3>
           <p class="text-muted">Once your site goes live, we offer ongoing support to help you grow and stay ahead online.</p>
         </div>
       </div>
     </div>
   </section>
 
-  
-  
   <!-- Testimonials Section -->
-  <section class="testimonials-section py-5" aria-labelledby="testimonials-heading">
+  <section class="py-5 bg-light" aria-labelledby="testimonials-heading">
     <div class="container">
-      <h2 id="testimonials-heading" class="text-center mb-5">What Our Clients Say</h2>
+      <h2 id="testimonials-heading" class="section-title text-center">What Our Clients Say</h2>
       <div class="row">
-        <div class="col-md-6 mb-4">
-          <blockquote class="blockquote">
-            <p class="mb-3">“They took the time to understand my business and built a site that really connects with my customers.”</p>
-            <footer class="blockquote-footer">Angela B., <cite title="Electrician Business">Electrician</cite></footer>
-          </blockquote>
+        <div class="col-lg-6 mb-4">
+          <div class="testimonial-card">
+            <blockquote class="blockquote mb-0">
+              <p class="mb-3">"They took the time to understand my business and built a site that really connects with my customers."</p>
+              <footer class="blockquote-footer">
+                <strong>Angela B.</strong>, <cite title="Electrician Business">Electrician</cite>
+              </footer>
+            </blockquote>
+          </div>
         </div>
-        <div class="col-md-6 mb-4">
-          <blockquote class="blockquote">
-            <p class="mb-3">“The site works great on phones, loads fast, and helped us double our local bookings.”</p>
-            <footer class="blockquote-footer">Jared M., <cite title="HVAC Specialist">HVAC Specialist</cite></footer>
-          </blockquote>
+        <div class="col-lg-6 mb-4">
+          <div class="testimonial-card">
+            <blockquote class="blockquote mb-0">
+              <p class="mb-3">"The site works great on phones, loads fast, and helped us double our local bookings."</p>
+              <footer class="blockquote-footer">
+                <strong>Jared M.</strong>, <cite title="HVAC Specialist">HVAC Specialist</cite>
+              </footer>
+            </blockquote>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
+
+  <!-- Packages Section -->
+  <section class="py-5" aria-labelledby="packages-heading">
+    <div class="container">
+      <h2 id="packages-heading" class="section-title text-center">Affordable Packages for Every Business</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 package-card">
+            <div class="card-body d-flex flex-column align-items-center text-center p-4">
+              <h3 class="card-title fw-bold mb-3 text-primary">Starter Package</h3>
+              <p class="card-text display-6 fw-semibold mb-4 text-dark">$500</p>
+              <ul class="list-unstyled mb-4 w-100">
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Up to 5 pages</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Responsive design</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Basic SEO setup</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-primary w-100 mt-auto">Get Started</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 package-card featured-package">
+            <div class="card-body d-flex flex-column align-items-center text-center p-4">
+              <h3 class="card-title fw-bold mb-3">Business Package</h3>
+              <p class="card-text display-6 fw-semibold mb-4">$750</p>
+              <ul class="list-unstyled mb-4 w-100">
+                <li class="mb-2"><i class="fas fa-check-circle text-light me-2"></i>Up to 10 pages</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-light me-2"></i>Advanced SEO features</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-light me-2"></i>Social media integration</li>
+              </ul>
+              <a href="contact.html" class="btn btn-light w-100 mt-auto fw-semibold">Get Started</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 package-card">
+            <div class="card-body d-flex flex-column align-items-center text-center p-4">
+              <h3 class="card-title fw-bold mb-3 text-primary">Premium Package</h3>
+              <p class="card-text display-6 fw-semibold mb-4 text-dark">$1000</p>
+              <ul class="list-unstyled mb-4 w-100">
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Everything in Business</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Business Intelligence</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Image Consultation</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Social Media Strategy</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-primary w-100 mt-auto">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5">
+        <div class="col">
+          <div class="alert alert-info text-center border-0" role="alert">
+            <i class="fas fa-info-circle me-2"></i>
+            <strong>Important:</strong> All sales are final and non-refundable. A non-refundable half payment is due prior to work beginning. Each website is renewed for the second year for $500. Multiple website discounts are available.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section py-5 text-white text-center" aria-labelledby="cta-heading">
+    <div class="container position-relative">
+      <h2 id="cta-heading" class="display-5 fw-bold mb-4">Ready to Elevate Your Online Presence?</h2>
+      <p class="lead mb-4">Let's work together to create a website that showcases your business and drives growth.</p>
+      <a href="contact.html" class="btn btn-light btn-lg px-5">Get in Touch</a>
+    </div>
+  </section>
+
   <!-- Footer Section -->
   <footer class="footer" role="contentinfo">
-    <div class="footer-content container">
+    <div class="container">
+      <div class="footer-content">
         <!-- Brand -->
         <div class="footer-brand">
-            <p class="footer-logo">Bayou Websites</p>
-            <p class="footer-tagline">Web Development for Blue-Collar Businesses</p>
+          <p class="footer-logo">Bayou Websites</p>
+          <p class="footer-tagline mb-0">Web Development for Blue-Collar Businesses</p>
         </div>
-  
+
         <!-- Navigation -->
         <div class="footer-nav">
-            <h3 class="footer-nav-title">Quick Links</h3>
-            <ul class="list-unstyled">
-                <li><a href="index.html" aria-label="Home page">Home</a></li>
-                <li><a href="about.html" aria-label="About us">About</a></li>
-                <li><a href="services.html" aria-label="Our services">Services</a></li>
-                <li><a href="portfolio.html" aria-label="Our portfolio">Portfolio</a></li>
-                <li><a href="contact.html" aria-label="Contact us">Contact</a></li>
-            </ul>
+          <h3 class="footer-nav-title">Quick Links</h3>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html" aria-label="Home page">Home</a></li>
+            <li><a href="about.html" aria-label="About us">About</a></li>
+            <li><a href="services.html" aria-label="Our services">Services</a></li>
+            <li><a href="portfolio.html" aria-label="Our portfolio">Portfolio</a></li>
+            <li><a href="contact.html" aria-label="Contact us">Contact</a></li>
+          </ul>
         </div>
-  
+
         <!-- Newsletter -->
         <div class="footer-newsletter">
-            <h3 class="footer-nav-title">Stay Updated</h3>
-            <form action="https://formspree.io/f/xeqyrgva" method="POST" aria-label="Subscribe to our newsletter">
-                <label for="newsletter-email" class="visually-hidden">Email address</label>
-                <div class="input-group">
-                    <input type="email" id="newsletter-email" name="email" class="form-control" placeholder="Your email address" required aria-describedby="newsletter-error">
-                    <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
-                </div>
-                <p id="newsletter-error" class="text-danger mt-2 visually-hidden">Please enter a valid email address.</p>
-            </form>
+          <h3 class="footer-nav-title">Stay Updated</h3>
+          <form action="https://formspree.io/f/xeqyrgva" method="POST" aria-label="Subscribe to our newsletter">
+            <label for="newsletter-email" class="visually-hidden">Email address</label>
+            <div class="input-group mb-3">
+              <input type="email" id="newsletter-email" name="email" class="form-control" placeholder="Your email address" required aria-describedby="newsletter-error">
+              <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
+            </div>
+            <p id="newsletter-error" class="text-danger small visually-hidden">Please enter a valid email address.</p>
+          </form>
         </div>
-   
-        <!-- Copyright -->
-        <div class="footer-copy">
-            <p>© 2025 Bayou Websites. All rights reserved. <a href="privacy.html" aria-label="Privacy policy">Privacy Policy</a></p>
-        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="footer-copy">
+        <p class="mb-0">© 2025 Bayou Websites. All rights reserved. <a href="privacy.html" aria-label="Privacy policy" class="text-decoration-none">Privacy Policy</a></p>
+      </div>
     </div>
   </footer>
-  
+
   <!-- Modal -->
   <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="welcomeModalLabel">Welcome to Bayou Websites!</h5>
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold" id="welcomeModalLabel">Welcome to Bayou Websites!</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>We specialize in creating tailored web solutions for blue-collar businesses. Let us help you grow your online presence!</p>
+          <p class="mb-4">We specialize in creating tailored web solutions for blue-collar businesses. Let us help you grow your online presence!</p>
           <form action="https://formspree.io/f/xeqyrgva" method="POST" aria-label="Schedule your appointment">
             <input type="hidden" name="_subject" value="Schedule Request from Bayou Websites">
             <input type="hidden" name="_captcha" value="false">
             <div class="mb-3">
-              <label for="modal-name" class="form-label">Your Name</label>
+              <label for="modal-name" class="form-label fw-semibold">Your Name</label>
               <input type="text" class="form-control" id="modal-name" name="name" required>
             </div>
             <div class="mb-3">
-              <label for="modal-email" class="form-label">Email Address</label>
+              <label for="modal-email" class="form-label fw-semibold">Email Address</label>
               <input type="email" class="form-control" id="modal-email" name="email" required>
             </div>
             <div class="mb-3">
-              <label for="modal-message" class="form-label">How can we help?</label>
-              <textarea class="form-control" id="modal-message" name="message" rows="3" required></textarea>
+              <label for="modal-message" class="form-label fw-semibold">How can we help?</label>
+              <textarea class="form-control" id="modal-message" name="message" rows="3" required placeholder="Tell us about your project..."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Schedule</button>
+            <button type="submit" class="btn btn-primary w-100 fw-semibold">Schedule Consultation</button>
           </form>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
+  
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const modalElement = document.getElementById('welcomeModal');
       if (!sessionStorage.getItem('welcomeModalShown') && modalElement) {
         const modal = new bootstrap.Modal(modalElement, {
           keyboard: true,
-          backdrop: true // Use default backdrop, not 'static'
+          backdrop: true
         });
         setTimeout(() => {
           modal.show();
         }, 2000);
 
-        // Set sessionStorage when modal is closed (by any means)
+        // Set sessionStorage when modal is closed
         modalElement.addEventListener('hidden.bs.modal', function () {
           sessionStorage.setItem('welcomeModalShown', 'true');
-          // Remove any lingering modal-backdrop
           document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
           document.body.classList.remove('modal-open');
           document.body.style.overflow = '';
         });
-        // Also set when shown (in case user doesn't close, but navigates away)
+        
         modalElement.addEventListener('shown.bs.modal', function () {
           sessionStorage.setItem('welcomeModalShown', 'true');
         });
       }
     });
-  </script>
-  <script>
+
+    // Newsletter validation
     $(document).ready(function() {
       $('#newsletter-email').on('input', function() {
         const email = $(this).val();

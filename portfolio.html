@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bayou Websites | Home</title>
-    <meta name="description" content="Welcome to Bayou Websites, your partner in crafting unique web experiences for blue-collar businesses in Louisiana."/>
-    <meta name="keywords" content="Louisiana web design, Bayou Websites, web development, blue collar websites"/>
+    <title>Bayou Websites | Portfolio</title>
+    <meta name="description" content="View our portfolio of web development projects for blue-collar businesses in Louisiana."/>
+    <meta name="keywords" content="Louisiana web design, Bayou Websites, web development, blue collar websites, portfolio"/>
     <meta name="author" content="Bayou Websites"/>
     <meta name="robots" content="index, follow"/>
-    <meta property="og:title" content="Bayou Websites | Home"/>
-    <meta property="og:description" content="Welcome to Bayou Websites, your partner in crafting unique web experiences for blue-collar businesses in Louisiana."/>
+    <meta property="og:title" content="Bayou Websites | Portfolio"/>
+    <meta property="og:description" content="View our portfolio of web development projects for blue-collar businesses in Louisiana."/>
     <meta property="og:image" content="./images/og-image.jpg"/>
-    <meta property="og:url" content="https://www.bayouwebsites.com"/>
+    <meta property="og:url" content="https://www.bayouwebsites.com/portfolio"/>
     <meta property="og:type" content="website"/>
-    <link rel="canonical" href="https://www.bayouwebsites.com/"/>
+    <link rel="canonical" href="https://www.bayouwebsites.com/portfolio"/>
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/portfolio.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,24 +21,197 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" as="style">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .hero-cta .btn {
+            transition: all 0.3s ease;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+        }
+        
+        .hero-cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Section Title Styling */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+            border-radius: 2px;
+        }
+        
+        /* Portfolio Cards */
+        .portfolio-link {
+            text-decoration: none;
+        }
+        
+        .portfolio-link .card {
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+            background: #fff;
+            border: none;
+        }
+        
+        .portfolio-link .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .portfolio-image {
+            border-radius: 1rem 1rem 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        /* Process Steps */
+        .process-step {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .process-step img {
+            filter: hue-rotate(240deg);
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Testimonials */
+        .testimonial {
+            background: #fff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #3b82f6;
+            height: 100%;
+        }
+        
+        /* Footer Styling */
+        .footer {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-brand .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-nav-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .footer-nav ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-nav ul li a {
+            color: #e5e7eb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-nav ul li a:hover {
+            color: #3b82f6;
+        }
+        
+        .footer-copy {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 50vh;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6MH8EEN7M9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-6MH8EEN7M9');
 </script>
+
 <body>
-  <!-- create a modern navbar section -->
-   <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">Bayou Websites</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Bayou Websites</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -65,268 +238,234 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section py-5 text-center text-white" aria-labelledby="hero-heading">
+  <section class="hero-section text-center text-white" aria-labelledby="hero-heading">
     <div class="container">
-      <h1 id="hero-heading" class="display-4 fw-bold">Portfolio</h1>
-      <p class="lead mb-4">quality web services for blue collar businesses</p>
-      <div class="hero-cta">
-        <a href="contact.html" class="btn btn-light btn-lg me-3" role="button" aria-label="Contact us to get started">Get Started</a>
-        <a href="portfolio.html" class="btn btn-outline-light btn-lg" role="button" aria-label="View our portfolio">See Our Work</a>
+      <div class="hero-content">
+        <h1 id="hero-heading" class="display-3 fw-bold mb-4">Portfolio</h1>
+        <p class="lead mb-5 fs-4">Quality web services for blue-collar businesses</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-light btn-lg me-3" role="button" aria-label="Contact us to get started">Get Started</a>
+          <a href="portfolio.html" class="btn btn-outline-light btn-lg" role="button" aria-label="View our portfolio">See Our Work</a>
+        </div>
       </div>
     </div>
   </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio-section py-5 bg-light" aria-labelledby="web-services-heading">
-          <div class="container">
-            <h2 id="web-services-heading" class="section-title">What We Did</h2>
-            <p class="portfolio-intro text-center lead mb-5">
-              Explore a selection of our recent web development projects, showcasing our passion for delivering impactful digital experiences across various industries.
-            </p>
-            <div class="row g-4">
-      
-              <!-- Project 1 -->
-              <div class="col-md-4">
-                <a href="project-ironwood.html" class="portfolio-link text-decoration-none">
-                  <div class="card h-100 shadow-sm">
-                    <img src="./images/LongHaul.gif" alt="Ironwood Carriers website screenshot" class="card-img-top portfolio-image">
-                    <div class="card-body">
-                      <h3 class="portfolio-title h5">Ironwood Carriers</h3>
-                      <p class="portfolio-description small">
-                        Robust website for a long-haul trucking company with integrated shipment tracking and enhanced client communication.
-                      </p>
-                      <p class="portfolio-tech text-muted small">Technologies: HTML5, CSS3, JavaScript, PHP</p>
-                    </div>
-                  </div>
-                </a>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-5 bg-light" aria-labelledby="portfolio-heading">
+    <div class="container">
+      <h2 id="portfolio-heading" class="section-title text-center">What We Did</h2>
+      <p class="text-center lead mb-5">
+        Explore a selection of our recent web development projects, showcasing our passion for delivering impactful digital experiences across various industries.
+      </p>
+      <div class="row g-4">
+
+        <!-- Project 1 -->
+        <div class="col-md-4">
+          <a href="project-ironwood.html" class="portfolio-link">
+            <div class="card h-100">
+              <img src="./images/LongHaul.gif" alt="Ironwood Carriers website screenshot" class="card-img-top portfolio-image">
+              <div class="card-body">
+                <h3 class="h5 fw-bold mb-3">Ironwood Carriers</h3>
+                <p class="mb-3">
+                  Robust website for a long-haul trucking company with integrated shipment tracking and enhanced client communication.
+                </p>
+                <p class="text-muted small">Technologies: HTML5, CSS3, JavaScript, PHP</p>
               </div>
-      
-              <!-- Project 2 -->
-              <div class="col-md-4">
-                <a href="project-wacarparts.html" class="portfolio-link text-decoration-none">
-                  <div class="card h-100 shadow-sm">
-                    <img src="./images/Wa carparts.gif" alt="WA Car Parts e-commerce platform screenshot" class="card-img-top portfolio-image">
-                    <div class="card-body">
-                      <h3 class="portfolio-title h5">WA Car Parts</h3>
-                      <p class="portfolio-description small">
-                        Built a modern e-commerce platform with a clean UI and secure Stripe checkout, significantly boosting online sales.
-                      </p>
-                      <p class="portfolio-tech text-muted small">Technologies: React, Node.js, MongoDB, Stripe API</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-      
-              <!-- Project 3 -->
-              <div class="col-md-4">
-                <a href="project-spiritracing.html" class="portfolio-link text-decoration-none">
-                  <div class="card h-100 shadow-sm">
-                    <img src="./images/SpiritRacingTeam.gif" alt="Spirit Racing Team website screenshot" class="card-img-top portfolio-image">
-                    <div class="card-body">
-                      <h3 class="portfolio-title h5">Spirit Racing Team</h3>
-                      <p class="portfolio-description small">
-                        Developed an engaging site with interactive events, sponsor highlights, and real-time social media feeds.
-                      </p>
-                      <p class="portfolio-tech text-muted small">Technologies: Angular, Firebase, Cloud Functions</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-      
             </div>
-          </div>
-        </section>
-      
-        <!-- Our Process Section -->
-        <section id="our-process" class="our-process-section py-5" aria-labelledby="process-heading">
-          <div class="container">
-            <h2 id="process-heading" class="section-title text-center mb-4">Our Process</h2>
-            <p class="text-center mb-5">We follow a structured approach to ensure every project is delivered with precision, clarity, and impact.</p>
-            <div class="row text-center g-4">
-      
-              <!-- Step 1 -->
-              <div class="col-md-3">
-                <div class="process-step">
-                  <img src="https://img.icons8.com/ios-filled/50/idea.png" alt="Planning icon" class="mb-2">
-                  <h3 class="h6">Planning</h3>
-                  <p class="small text-muted">We understand your goals and map out a clear path to success.</p>
-                </div>
+          </a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-4">
+          <a href="project-wacarparts.html" class="portfolio-link">
+            <div class="card h-100">
+              <img src="./images/Wa carparts.gif" alt="WA Car Parts e-commerce platform screenshot" class="card-img-top portfolio-image">
+              <div class="card-body">
+                <h3 class="h5 fw-bold mb-3">WA Car Parts</h3>
+                <p class="mb-3">
+                  Built a modern e-commerce platform with a clean UI and secure Stripe checkout, significantly boosting online sales.
+                </p>
+                <p class="text-muted small">Technologies: React, Node.js, MongoDB, Stripe API</p>
               </div>
-      
-              <!-- Step 2 -->
-              <div class="col-md-3">
-                <div class="process-step">
-                  <img src="https://img.icons8.com/ios-filled/50/design.png" alt="Design icon" class="mb-2">
-                  <h3 class="h6">Design</h3>
-                  <p class="small text-muted">Visually engaging, on-brand layouts tailored to your audience.</p>
-                </div>
-              </div>
-      
-              <!-- Step 3 -->
-              <div class="col-md-3">
-                <div class="process-step">
-                  <img src="https://img.icons8.com/ios-filled/50/code.png" alt="Development icon" class="mb-2">
-                  <h3 class="h6">Development</h3>
-                  <p class="small text-muted">Clean, scalable code with performance and usability in mind.</p>
-                </div>
-              </div>
-      
-              <!-- Step 4 -->
-              <div class="col-md-3">
-                <div class="process-step">
-                  <img src="https://img.icons8.com/ios-filled/50/rocket.png" alt="Launch icon" class="mb-2">
-                  <h3 class="h6">Launch</h3>
-                  <p class="small text-muted">We launch your website and support you post-launch for success.</p>
-                </div>
-              </div>
-      
             </div>
-          </div>
-        </section>
-      
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials-section py-5 bg-light" aria-labelledby="testimonials-heading">
-          <div class="container">
-            <h2 id="testimonials-heading" class="section-title text-center mb-5">What Our Clients Say</h2>
-            <div class="row g-4">
-      
-              <div class="col-md-4">
-                <blockquote class="testimonial p-4 bg-white shadow-sm rounded h-100">
-                  <p class="mb-3">“Bayou Websites transformed our online presence. Professional, creative, and exceeded expectations.”</p>
-                  <footer class="blockquote-footer">John P., <cite>Ironwood Carriers</cite></footer>
-                </blockquote>
+          </a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-4">
+          <a href="project-spiritracing.html" class="portfolio-link">
+            <div class="card h-100">
+              <img src="./images/SpiritRacingTeam.gif" alt="Spirit Racing Team website screenshot" class="card-img-top portfolio-image">
+              <div class="card-body">
+                <h3 class="h5 fw-bold mb-3">Spirit Racing Team</h3>
+                <p class="mb-3">
+                  Developed an engaging site with interactive events, sponsor highlights, and real-time social media feeds.
+                </p>
+                <p class="text-muted small">Technologies: Angular, Firebase, Cloud Functions</p>
               </div>
-      
-              <div class="col-md-4">
-                <blockquote class="testimonial p-4 bg-white shadow-sm rounded h-100">
-                  <p class="mb-3">“Our new e-commerce site is a game-changer. Sales are up, and the user experience is top-notch.”</p>
-                  <footer class="blockquote-footer">Jane S., <cite>WA Car Parts</cite></footer>
-                </blockquote>
-              </div>
-      
-              <div class="col-md-4">
-                <blockquote class="testimonial p-4 bg-white shadow-sm rounded h-100">
-                  <p class="mb-3">“They truly understood our brand and built a site that fans and sponsors love.”</p>
-                  <footer class="blockquote-footer">Mike J., <cite>Spirit Racing Team</cite></footer>
-                </blockquote>
-              </div>
-      
             </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process Section -->
+  <section id="our-process" class="py-5" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading" class="section-title text-center">Our Process</h2>
+      <p class="text-center lead mb-5">We follow a structured approach to ensure every project is delivered with precision, clarity, and impact.</p>
+      <div class="row text-center g-4">
+
+        <!-- Step 1 -->
+        <div class="col-md-3">
+          <div class="process-step">
+            <img src="https://img.icons8.com/ios-filled/50/idea.png" alt="Planning icon" class="mb-3">
+            <h3 class="h5 fw-bold mb-3">Planning</h3>
+            <p class="text-muted">We understand your goals and map out a clear path to success.</p>
           </div>
-        </section>
-      
-      </main>
-      
-      
-  
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-md-3">
+          <div class="process-step">
+            <img src="https://img.icons8.com/ios-filled/50/design.png" alt="Design icon" class="mb-3">
+            <h3 class="h5 fw-bold mb-3">Design</h3>
+            <p class="text-muted">Visually engaging, on-brand layouts tailored to your audience.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-md-3">
+          <div class="process-step">
+            <img src="https://img.icons8.com/ios-filled/50/code.png" alt="Development icon" class="mb-3">
+            <h3 class="h5 fw-bold mb-3">Development</h3>
+            <p class="text-muted">Clean, scalable code with performance and usability in mind.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="col-md-3">
+          <div class="process-step">
+            <img src="https://img.icons8.com/ios-filled/50/rocket.png" alt="Launch icon" class="mb-3">
+            <h3 class="h5 fw-bold mb-3">Launch</h3>
+            <p class="text-muted">We launch your website and support you post-launch for success.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5 bg-light" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <h2 id="testimonials-heading" class="section-title text-center">What Our Clients Say</h2>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="testimonial">
+            <blockquote class="blockquote mb-0">
+              <p class="mb-3">"Bayou Websites transformed our online presence. Professional, creative, and exceeded expectations."</p>
+              <footer class="blockquote-footer">
+                <strong>John P.</strong>, <cite title="Ironwood Carriers">Ironwood Carriers</cite>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonial">
+            <blockquote class="blockquote mb-0">
+              <p class="mb-3">"Our new e-commerce site is a game-changer. Sales are up, and the user experience is top-notch."</p>
+              <footer class="blockquote-footer">
+                <strong>Jane S.</strong>, <cite title="WA Car Parts">WA Car Parts</cite>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonial">
+            <blockquote class="blockquote mb-0">
+              <p class="mb-3">"They truly understood our brand and built a site that fans and sponsors love."</p>
+              <footer class="blockquote-footer">
+                <strong>Mike J.</strong>, <cite title="Spirit Racing Team">Spirit Racing Team</cite>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Footer Section -->
-<footer class="footer" role="contentinfo">
-  <div class="footer-content container">
-      <!-- Brand -->
-      <div class="footer-brand">
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Brand -->
+        <div class="footer-brand">
           <p class="footer-logo">Bayou Websites</p>
-          <p class="footer-tagline">Web Development for Blue-Collar Businesses</p>
-      </div>
+          <p class="footer-tagline mb-0">Web Development for Blue-Collar Businesses</p>
+        </div>
 
-      <!-- Navigation -->
-      <div class="footer-nav">
+        <!-- Navigation -->
+        <div class="footer-nav">
           <h3 class="footer-nav-title">Quick Links</h3>
-          <ul class="list-unstyled">
-              <li><a href="index.html" aria-label="Home page">Home</a></li>
-              <li><a href="about.html" aria-label="About us">About</a></li>
-              <li><a href="services.html" aria-label="Our services">Services</a></li>
-              <li><a href="portfolio.html" aria-label="Our portfolio">Portfolio</a></li>
-              <li><a href="contact.html" aria-label="Contact us">Contact</a></li>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html" aria-label="Home page">Home</a></li>
+            <li><a href="about.html" aria-label="About us">About</a></li>
+            <li><a href="services.html" aria-label="Our services">Services</a></li>
+            <li><a href="portfolio.html" aria-label="Our portfolio">Portfolio</a></li>
+            <li><a href="contact.html" aria-label="Contact us">Contact</a></li>
           </ul>
-      </div>
+        </div>
 
-      <!-- Newsletter -->
-      <div class="footer-newsletter">
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
           <h3 class="footer-nav-title">Stay Updated</h3>
           <form action="https://formspree.io/f/xeqyrgva" method="POST" aria-label="Subscribe to our newsletter">
-              <label for="newsletter-email" class="visually-hidden">Email address</label>
-              <div class="input-group">
-                  <input type="email" id="newsletter-email" name="email" class="form-control" placeholder="Your email address" required aria-describedby="newsletter-error">
-                  <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
-              </div>
-              <p id="newsletter-error" class="text-danger mt-2 visually-hidden">Please enter a valid email address.</p>
+            <label for="newsletter-email" class="visually-hidden">Email address</label>
+            <div class="input-group mb-3">
+              <input type="email" id="newsletter-email" name="email" class="form-control" placeholder="Your email address" required aria-describedby="newsletter-error">
+              <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
+            </div>
+            <p id="newsletter-error" class="text-danger small visually-hidden">Please enter a valid email address.</p>
           </form>
+        </div>
       </div>
-  
-
+      
       <!-- Copyright -->
       <div class="footer-copy">
-          <p>© 2025 Bayou Websites. All rights reserved. <a href="privacy.html" aria-label="Privacy policy">Privacy Policy</a></p>
+        <p class="mb-0">© 2025 Bayou Websites. All rights reserved. <a href="privacy.html" aria-label="Privacy policy" class="text-decoration-none">Privacy Policy</a></p>
       </div>
-  </div>
-</footer>
+    </div>
+  </footer>
 
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
+  
+  <script>
+    $(document).ready(function() {
+      $('#newsletter-email').on('input', function() {
+        const email = $(this).val();
+        const errorMessage = $('#newsletter-error');
+        if (email && !validateEmail(email)) {
+          errorMessage.removeClass('visually-hidden');
+        } else {
+          errorMessage.addClass('visually-hidden');
+        }
+      });
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-      // Navbar elements
-      const navbarToggler = document.querySelector('.navbar-toggler');
-      const navbarCollapse = document.querySelector('#navbarNav');
-      const navLinks = document.querySelectorAll('.nav-link');
-      const navbar = document.querySelector('.navbar');
-
-      // Check if elements exist
-      if (!navbarToggler || !navbarCollapse || !navLinks || !navbar) {
-          console.warn('Navbar elements not found.');
-          return;
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
       }
-
-      // Set active link based on current page
-      const setActiveLink = () => {
-          const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-          navLinks.forEach(link => {
-              const linkPath = link.getAttribute('href');
-              link.classList.toggle('active', linkPath === currentPath);
-          });
-      };
-
-      // Initialize active link
-      setActiveLink();
-
-      // Toggle navbar on mobile
-      navbarToggler.addEventListener('click', () => {
-          const isExpanded = navbarCollapse.classList.contains('show');
-          navbarCollapse.classList.toggle('show');
-          navbarToggler.setAttribute('aria-expanded', !isExpanded);
-      });
-
-      // Close mobile menu when a nav link is clicked
-      navLinks.forEach(link => {
-          link.addEventListener('click', () => {
-              if (navbarCollapse.classList.contains('show')) {
-                  navbarCollapse.classList.remove('show');
-                  navbarToggler.setAttribute('aria-expanded', 'false');
-              }
-          });
-      });
-
-      // Handle window resize to reset menu state
-      window.addEventListener('resize', () => {
-          if (window.innerWidth >= 992 && navbarCollapse.classList.contains('show')) {
-              navbarCollapse.classList.remove('show');
-              navbarToggler.setAttribute('aria-expanded', 'false');
-          }
-      });
-
-      // Accessibility: Close menu on Escape key
-      document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
-              navbarCollapse.classList.remove('show');
-              navbarToggler.setAttribute('aria-expanded', 'false');
-              navbarToggler.focus();
-          }
-      });
-  });
-</script>
+    });
+  </script>
 </body>
 </html>
