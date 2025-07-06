@@ -380,8 +380,92 @@
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7x2j5l5e5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-7+Q1g6v2x4j8z9e0c4f3a1b2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w" crossorigin="anonymous"></script>
-  
+ 
   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mobile Navbar Toggle Functionality
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('#navbarNav');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const navbar = document.querySelector('.navbar');
+
+      // Check if elements exist
+      if (!navbarToggler || !navbarCollapse || !navLinks || !navbar) {
+          console.warn('Navbar elements not found.');
+          return;
+      }
+
+      // Set active link based on current page
+      const setActiveLink = () => {
+          const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+          navLinks.forEach(link => {
+              const linkPath = link.getAttribute('href');
+              link.classList.toggle('active', linkPath === currentPath);
+          });
+      };
+
+      // Initialize active link
+      setActiveLink();
+
+      // Toggle navbar on mobile
+      navbarToggler.addEventListener('click', () => {
+          const isExpanded = navbarCollapse.classList.contains('show');
+          navbarCollapse.classList.toggle('show');
+          navbarToggler.setAttribute('aria-expanded', !isExpanded);
+      });
+
+      // Close mobile menu when a nav link is clicked
+      navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+              if (navbarCollapse.classList.contains('show')) {
+                  navbarCollapse.classList.remove('show');
+                  navbarToggler.setAttribute('aria-expanded', 'false');
+              }
+          });
+      });
+
+      // Handle window resize to reset menu state
+      window.addEventListener('resize', () => {
+          if (window.innerWidth >= 992 && navbarCollapse.classList.contains('show')) {
+              navbarCollapse.classList.remove('show');
+              navbarToggler.setAttribute('aria-expanded', 'false');
+          }
+      });
+
+      // Accessibility: Close menu on Escape key
+      document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
+              navbarCollapse.classList.remove('show');
+              navbarToggler.setAttribute('aria-expanded', 'false');
+              navbarToggler.focus();
+          }
+      });
+
+      // Welcome Modal Functionality
+      const modalElement = document.getElementById('welcomeModal');
+      if (!sessionStorage.getItem('welcomeModalShown') && modalElement) {
+        const modal = new bootstrap.Modal(modalElement, {
+          keyboard: true,
+          backdrop: true
+        });
+        setTimeout(() => {
+          modal.show();
+        }, 2000);
+
+        modalElement.addEventListener('hidden.bs.modal', function () {
+          sessionStorage.setItem('welcomeModalShown', 'true');
+          document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+          document.body.classList.remove('modal-open');
+          document.body.style.overflow = '';
+        });
+        
+        modalElement.addEventListener('shown.bs.modal', function () {
+          sessionStorage.setItem('welcomeModalShown', 'true');
+        });
+      }
+    });
+
+    // Newsletter validation
     $(document).ready(function() {
       $('#newsletter-email').on('input', function() {
         const email = $(this).val();
